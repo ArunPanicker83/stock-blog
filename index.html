@@ -215,8 +215,57 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
 @media(max-width:600px){.side{flex-direction:column;align-items:stretch}.find{max-width:none;flex-basis:auto}#dateline{font-size:16px;margin-bottom:8px}.chip{font-size:13px;padding:5px 10px}.strip{padding-bottom:20px}.board .bn{font-size:13px}}
 @media(max-width:860px){.top2,.mhead,.fgrid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){.tools input{max-width:none;flex-basis:100%}.board{gap:0 8px}.bn,.lv,.pc{font-size:14px}table{font-size:13px}th,td{padding:6px 4px}.stk thead{display:none}.stk tr{display:grid;padding-block:8px;border-bottom:1px solid var(--line)}.stk td{display:flex;justify-content:space-between;gap:12px;border:0;padding:2px 0}.stk td::before{content:attr(data-l);color:var(--muted)}.tools .gap{display:none}}
+/* feat:v1 */
+.hours{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:12px;margin-bottom:20px}
+.hr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px}
+.hr .h1{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.hr .h1 b{font:600 16px var(--fd)}
+.hr .clk{font:600 22px var(--fd);letter-spacing:-.01em}
+.hr .clk small{font:500 13px var(--ft);color:var(--muted);margin-left:6px}
+.hr .cd{font-size:14px;color:var(--muted)}
+.pill{font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;white-space:nowrap;background:var(--zone);color:var(--muted);border:1px solid var(--line)}
+.pill.open{background:var(--upbg);color:var(--up);border-color:transparent}
+.pill.hol{background:color-mix(in srgb,var(--H) 18%,transparent);color:var(--H);border-color:transparent}
+.prog{height:6px;border-radius:999px;background:var(--zone);overflow:hidden}.prog i{display:block;height:100%;background:linear-gradient(90deg,#6366f1,#14b8a6);border-radius:999px}
+.row2{margin-top:20px}
+.wl{display:grid;gap:6px;max-height:340px;overflow:auto}
+.wli{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto auto;gap:10px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.wli .o{all:unset;cursor:pointer;display:block;min-width:0}
+.wli .o b{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wli .o span{font-size:13px;color:var(--muted)}
+.wli .o:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.xbtn{background:transparent;border:0;color:var(--muted);font-size:18px;cursor:pointer;width:32px;height:32px;border-radius:8px}
+.xbtn:hover{background:var(--zone);color:var(--ink)}
+.chg{display:grid;gap:0;max-height:340px;overflow:auto}
+.chg .ci{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:14px}
+.chg .ci:first-child{border-top:0}
+.chg .dt{color:var(--muted);font-variant-numeric:tabular-nums}
+.chg .ci button{all:unset;cursor:pointer;font-weight:600}
+.chg .ci button:hover{text-decoration:underline}
+.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:5px;padding:1px 6px;margin-right:6px}
+.tag.Up{background:var(--upbg);color:var(--up)}.tag.Down{background:var(--downbg);color:var(--down)}.tag.New{background:var(--zone);color:var(--accent)}
+.star{flex:none;background:transparent;border:1px solid var(--line);border-radius:8px;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+.star svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.star[aria-pressed=true]{color:#f5b301;border-color:#f5b301}.star[aria-pressed=true] svg{fill:#f5b301}
+.star:hover{border-color:var(--accent)}
+.cmpb[aria-pressed=true]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.cmpbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:#0d1430;color:#fff;border:1px solid #4f46e5;border-radius:14px;padding:10px 12px 10px 16px;box-shadow:0 16px 40px -12px rgba(8,12,30,.6);max-width:calc(100vw - 32px)}
+.cmpbar b{font-size:14px}.cmpbar span{font-size:14px;color:#c7d2fe}
+.cmpbar button{font:600 14px var(--ft);border-radius:8px;padding:8px 12px;cursor:pointer;border:0}
+.cmpbar .go{background:linear-gradient(90deg,#6366f1,#14b8a6);color:#fff}.cmpbar .cl{background:rgba(255,255,255,.12);color:#fff}
+.ctab{width:100%;border-collapse:collapse;font-size:14px}
+.ctab th,.ctab td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}
+.ctab th:first-child,.ctab td:first-child{text-align:left;color:var(--muted);font-weight:600}
+.ctab thead th{color:var(--ink);font:600 15px var(--fd)}
+.bigc{margin-top:14px;border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--card)}
+.bigc h4{margin:0 0 2px;font:600 16px var(--fd)}
+.bigc .cap{font-size:13px;color:var(--muted);margin:6px 0 0}
+.bigc svg{width:100%;height:auto;display:block;margin-top:8px}
+.secsum{font-size:14px;color:var(--muted);font-weight:500}
+.cds{display:none}
+@media(max-width:600px){.hours{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.hr{padding:10px;gap:4px}.hr .h1{flex-direction:column;align-items:flex-start;gap:4px}.hr .h1 b{font-size:14px}.hr .clk{font-size:18px}.hr .clk small{display:none}.hr .cd{font-size:12px}.cdl{display:none}.cds{display:inline}.pill{font-size:11px;padding:2px 8px}.wli{grid-template-columns:minmax(0,1fr) auto auto auto}.wli .rb{display:none}.ctab{font-size:13px}.ctab th,.ctab td{padding:7px 6px}}
 .legal{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}.legal p{margin:0;max-width:80ch}.legal nav{display:flex;gap:16px}.legal a{font-weight:600;text-decoration:none}.legal a:hover{text-decoration:underline}
-</style>
+.scr{padding-block:36px 8px;border-top:1px solid var(--line);margin-top:28px}.scr h2{font:600 28px/1.1 var(--fd);margin:0 0 4px}.scrbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 12px}.scrbar button{font:600 14px var(--ft);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer;min-height:40px}.scrbar button[aria-selected=true]{background:linear-gradient(120deg,#0d1430,#312e81 70%,#134e4a 130%);color:#fff;border-color:#4f46e5}.scrbox{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);min-height:220px}.scrgate{display:grid;place-items:center;gap:14px;text-align:center;padding:40px 20px;max-width:620px;margin:0 auto}.scrgate p{margin:0;color:var(--muted);font-size:15px}.scrgate b{color:var(--ink)}.scrgo{font:600 15px var(--ft);color:#fff;background:linear-gradient(90deg,#6366f1,#14b8a6);border:0;border-radius:10px;padding:12px 20px;cursor:pointer}.scrbox .tradingview-widget-copyright{font-size:13px;padding:8px 12px;color:var(--muted)}</style>
 
 <header class="strip band"><div class="in">
   <div><div class="eyebrow">NASDAQ · LSE · NSE/BSE</div><h1>Daily Stock Market Blog</h1><p>What analysts rate the biggest names on NASDAQ, the London Stock Exchange and India's NSE/BSE, with today's index moves and each stock's price history.</p></div>
@@ -230,16 +279,23 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
   </div>
 </div></header>
 
-<section class="zone band"><div class="in top2">
+<section class="zone band"><div class="in hours" id="hours" aria-label="Market hours"></div><div class="in top2">
   <div class="panel"><h2 id="boardTitle">Index moves</h2><p class="sub">Change on the session. A green dot marks a market still trading, so its figure is intraday.</p><div class="board" id="board"></div></div>
   <div class="panel"><h2>What analysts say</h2><p class="sub">Stocks covered in each market, by consensus rating.</p><div class="mix" id="mix"></div>
   <div class="legend"><span><i class="bSB"></i>Strong Buy</span><span><i class="bB"></i>Buy</span><span><i class="bH"></i>Hold</span><span><i class="bS"></i>Sell</span></div></div>
-</div></section>
+</div><div class="in top2 row2"><div class="panel"><h2>Your watchlist</h2><p class="sub">Saved in this browser only. Tap the star on any stock to add it.</p><div id="wlp"></div></div><div class="panel"><h2>What changed</h2><p class="sub">Analyst upgrades, downgrades and new coverage in the past two weeks, plus consensus changes since the previous day.</p><div id="chg"></div></div></div></section>
 
 <nav class="tabs band" aria-label="Markets"><div class="in"><div class="tabhd"><b>Choose a market</b><span>The stock cards, ratings and trend below change with your choice.</span></div><div class="tablist" role="tablist" id="tabs"></div></div></nav>
 <main class="band"><div class="in" id="market"></div>
+<section class="in scr" id="screener" aria-labelledby="scrT">
+<h2 id="scrT">Market screener</h2>
+<p class="sub">Every listed stock, with live prices, % change today, market cap and sector. Sort by any column. Provided by TradingView; the US view covers NASDAQ and NYSE.</p>
+<div class="scrbar" role="tablist" aria-label="Screener market"><button type="button" role="tab" data-mk="america" aria-selected="true">United States</button><button type="button" role="tab" data-mk="uk" aria-selected="false">United Kingdom (LSE)</button><button type="button" role="tab" data-mk="india" aria-selected="false">India (NSE/BSE)</button></div>
+<div class="scrbox" id="scrBox"><div class="scrgate"><p><b>The screener is provided by TradingView.</b> Loading it connects your browser to TradingView, Inc. (USA), which receives your IP address and may store cookies. Nothing is loaded until you click. <a href="datenschutz.html#tradingview">Privacy details</a></p><button type="button" class="scrgo" id="scrGo">Load the screener</button></div></div>
+</section>
 <section class="in arch"><h2>Archive</h2><p class="sub">The last 30 trading days, newest first.</p><div id="archive"></div></section></main>
 <dialog id="dlg" aria-labelledby="dlgT"><div class="dh"><b id="dlgT">Stock details</b><button type="button" id="dlgX" aria-label="Close">×</button></div><div class="db" id="dlgB"></div></dialog>
+<div class="cmpbar" id="cmpbar" hidden></div>
 <footer class="band"><div class="in fgrid" id="footer"></div><div class="in legal"><p>Data may be delayed, incomplete or contain errors. Ratings are third-party analyst opinions, collected for information only, not a recommendation to buy or sell any security.</p><nav aria-label="Legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Privacy</a></nav></div></footer>
 
 <script id="blog-data" type="application/json">{
@@ -377,7 +433,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Nov 18, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Advanced Micro Devices",
@@ -440,7 +497,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$460 → $620",
          "Nov 9, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Micron Technology",
@@ -503,7 +561,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$1,400",
          "Oct 23, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Intel",
@@ -566,7 +625,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$112 → $103",
          "Oct 20, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Broadcom",
@@ -629,7 +689,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Nov 9, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Arm Holdings",
@@ -692,7 +753,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$212",
          "Nov 5, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Analog Devices",
@@ -755,7 +817,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$450 → $675",
          "Aug 24, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Semtech",
@@ -818,7 +881,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$200",
          "Oct 16, 2026"
         ]
-       ]
+       ],
+       "ind": "Semiconductors"
       },
       {
        "n": "Microsoft",
@@ -881,7 +945,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$650",
          "Nov 19, 2026"
         ]
-       ]
+       ],
+       "ind": "Software"
       },
       {
        "n": "Amazon",
@@ -944,7 +1009,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$340",
          "Nov 21, 2026"
         ]
-       ]
+       ],
+       "ind": "Internet"
       },
       {
        "n": "Meta Platforms",
@@ -1007,7 +1073,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$850",
          "Oct 28, 2026"
         ]
-       ]
+       ],
+       "ind": "Internet"
       },
       {
        "n": "Alphabet",
@@ -1070,7 +1137,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Nov 14, 2026"
         ]
-       ]
+       ],
+       "ind": "Internet"
       },
       {
        "n": "Apple",
@@ -1133,7 +1201,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Nov 12, 2026"
         ]
-       ]
+       ],
+       "ind": "Technology hardware"
       },
       {
        "n": "Insmed",
@@ -1196,7 +1265,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$169",
          "Oct 13, 2026"
         ]
-       ]
+       ],
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Cogent Biosciences",
@@ -1259,7 +1329,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$55",
          "Sep 15, 2026"
         ]
-       ]
+       ],
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Zoom Communications",
@@ -1322,7 +1393,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$115 → $112",
          "Oct 21, 2026"
         ]
-       ]
+       ],
+       "ind": "Software"
       },
       {
        "n": "Dollar Tree",
@@ -1385,7 +1457,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$160",
          "Sep 8, 2026"
         ]
-       ]
+       ],
+       "ind": "Retail"
       },
       {
        "n": "Fluence Energy",
@@ -1448,7 +1521,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$9",
          "Oct 14, 2026"
         ]
-       ]
+       ],
+       "ind": "Energy"
       },
       {
        "n": "Embecta",
@@ -1495,7 +1569,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "$12 → $5",
          "May 7, 2026"
         ]
-       ]
+       ],
+       "ind": "Pharma & healthcare"
       }
      ],
      "histDates": [
@@ -1592,7 +1667,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "3,500p",
          "May 16, 2026"
         ]
-       ]
+       ],
+       "ind": "Consumer staples"
       },
       {
        "n": "Babcock International",
@@ -1655,7 +1731,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "1,140p → 1,100p",
          "Jun 30, 2026"
         ]
-       ]
+       ],
+       "ind": "Aerospace & defence"
       },
       {
        "n": "Rolls-Royce Holdings",
@@ -1718,7 +1795,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "1,550p → 1,730p",
          "Aug 18, 2026"
         ]
-       ]
+       ],
+       "ind": "Aerospace & defence"
       },
       {
        "n": "Endeavour Mining",
@@ -1781,7 +1859,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "CA$93.90",
          "Jul 30, 2026"
         ]
-       ]
+       ],
+       "ind": "Mining"
       },
       {
        "n": "RELX",
@@ -1845,7 +1924,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "3,600p",
          "Sep 29, 2026"
         ]
-       ]
+       ],
+       "ind": "Data & information services"
       },
       {
        "n": "AO World",
@@ -1877,7 +1957,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "160p → 155p",
          "Sep 24, 2026"
         ]
-       ]
+       ],
+       "ind": "Retail"
       },
       {
        "n": "AstraZeneca",
@@ -1941,7 +2022,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "15,200p",
          "Oct 15, 2026"
         ]
-       ]
+       ],
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Compass Group",
@@ -2005,7 +2087,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Jul 23, 2026"
         ]
-       ]
+       ],
+       "ind": "Consumer services"
       },
       {
        "n": "Experian",
@@ -2069,7 +2152,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "3,435p → 3,601p",
          "Aug 21, 2026"
         ]
-       ]
+       ],
+       "ind": "Data & information services"
       },
       {
        "n": "London Stock Exchange Group",
@@ -2133,7 +2217,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "10,600p",
          "Oct 22, 2026"
         ]
-       ]
+       ],
+       "ind": "Data & information services"
       },
       {
        "n": "Sage Group",
@@ -2197,7 +2282,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "1,050p → 1,150p",
          "Jul 31, 2026"
         ]
-       ]
+       ],
+       "ind": "Software"
       },
       {
        "n": "Balfour Beatty",
@@ -2245,7 +2331,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "870p → 1,070p",
          "Aug 13, 2026"
         ]
-       ]
+       ],
+       "ind": "Construction & engineering"
       },
       {
        "n": "Anglo American",
@@ -2309,7 +2396,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "4,200p → 4,100p",
          "Jul 24, 2026"
         ]
-       ]
+       ],
+       "ind": "Mining"
       },
       {
        "n": "Glencore",
@@ -2373,7 +2461,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "770p → 780p",
          "Aug 12, 2026"
         ]
-       ]
+       ],
+       "ind": "Mining"
       },
       {
        "n": "Weir Group",
@@ -2437,7 +2526,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "3,200p",
          "Jul 30, 2026"
         ]
-       ]
+       ],
+       "ind": "Industrials"
       },
       {
        "n": "Standard Chartered",
@@ -2500,7 +2590,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "2,130p → 2,230p",
          "Jul 30, 2026"
         ]
-       ]
+       ],
+       "ind": "Banks"
       },
       {
        "n": "Barclays",
@@ -2564,7 +2655,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "525p",
          "Oct 22, 2026"
         ]
-       ]
+       ],
+       "ind": "Banks"
       },
       {
        "n": "GSK",
@@ -2628,7 +2720,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "2,000p",
          "Sep 29, 2026"
         ]
-       ]
+       ],
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Unilever",
@@ -2691,7 +2784,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Oct 6, 2026"
         ]
-       ]
+       ],
+       "ind": "Consumer staples"
       },
       {
        "n": "HSBC Holdings",
@@ -2755,7 +2849,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Aug 5, 2026"
         ]
-       ]
+       ],
+       "ind": "Banks"
       },
       {
        "n": "Antofagasta",
@@ -2819,7 +2914,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "4,100p → 4,000p",
          "Aug 14, 2026"
         ]
-       ]
+       ],
+       "ind": "Mining"
       },
       {
        "n": "Fresnillo",
@@ -2883,7 +2979,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "2,400p",
          "Oct 22, 2026"
         ]
-       ]
+       ],
+       "ind": "Mining"
       }
      ],
      "histDates": [
@@ -2979,7 +3076,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹2,540",
          "Feb 13, 2026"
         ]
-       ]
+       ],
+       "ind": "Consumer staples"
       },
       {
        "n": "Tata Steel",
@@ -3026,7 +3124,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹210",
          "Apr 26, 2026"
         ]
-       ]
+       ],
+       "ind": "Metals & steel"
       },
       {
        "n": "APL Apollo Tubes",
@@ -3047,7 +3146,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 26 Nov (Multibagg top-traded-by-value table, 26 Nov); 1D = 25 Nov close"
+       "pt": "Close 26 Nov (Multibagg top-traded-by-value table, 26 Nov); 1D = 25 Nov close",
+       "ind": "Metals & steel"
       },
       {
        "n": "Hindalco Industries",
@@ -3068,7 +3168,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 26 Nov (snapshot near the close, InCred Money); 1D = 25 Nov close"
+       "pt": "Close 26 Nov (snapshot near the close, InCred Money); 1D = 25 Nov close",
+       "ind": "Metals & steel"
       },
       {
        "n": "JSW Steel",
@@ -3115,7 +3216,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,490",
          "Apr 27, 2026"
         ]
-       ]
+       ],
+       "ind": "Metals & steel"
       },
       {
        "n": "Axis Bank",
@@ -3170,7 +3272,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,610",
          "Apr 27, 2026"
         ]
-       ]
+       ],
+       "ind": "Banks"
       },
       {
        "n": "HDFC Bank",
@@ -3233,7 +3336,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,000 → ₹925",
          "Sep 1, 2026"
         ]
-       ]
+       ],
+       "ind": "Banks"
       },
       {
        "n": "ICICI Bank",
@@ -3264,7 +3368,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,750",
          "Jul 20, 2026"
         ]
-       ]
+       ],
+       "ind": "Banks"
       },
       {
        "n": "State Bank of India",
@@ -3320,7 +3425,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,300",
          "May 11, 2026"
         ]
-       ]
+       ],
+       "ind": "Banks"
       },
       {
        "n": "Tata Consultancy Services",
@@ -3376,7 +3482,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹2,400",
          "Jun 24, 2026"
         ]
-       ]
+       ],
+       "ind": "IT services"
       },
       {
        "n": "Tech Mahindra",
@@ -3440,7 +3547,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,225 → ₹1,260",
          "Jul 17, 2026"
         ]
-       ]
+       ],
+       "ind": "IT services"
       },
       {
        "n": "HCLTech",
@@ -3496,7 +3604,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,300 → ₹1,140",
          "Jul 14, 2026"
         ]
-       ]
+       ],
+       "ind": "IT services"
       },
       {
        "n": "Infosys",
@@ -3543,7 +3652,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,640 → ₹1,760",
          "Apr 1, 2026"
         ]
-       ]
+       ],
+       "ind": "IT services"
       },
       {
        "n": "Shriram Finance",
@@ -3582,7 +3692,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,095",
          "Oct 25, 2026"
         ]
-       ]
+       ],
+       "ind": "Finance"
       },
       {
        "n": "Maruti Suzuki",
@@ -3622,7 +3733,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "n/a",
          "Apr 30, 2026"
         ]
-       ]
+       ],
+       "ind": "Autos & parts"
       },
       {
        "n": "PB Fintech (Policybazaar)",
@@ -3643,7 +3755,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (Multibagg top-traded table)"
+       "pt": "Close 25 Nov (Multibagg top-traded table)",
+       "ind": "Insurance"
       },
       {
        "n": "Bharat Forge",
@@ -3683,7 +3796,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹2,360",
          "Jun 23, 2026"
         ]
-       ]
+       ],
+       "ind": "Autos & parts"
       },
       {
        "n": "Polycab India",
@@ -3731,7 +3845,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹10,019",
          "May 15, 2026"
         ]
-       ]
+       ],
+       "ind": "Industrials"
       },
       {
        "n": "Reliance Industries",
@@ -3786,7 +3901,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,610",
          "Jun 22, 2026"
         ]
-       ]
+       ],
+       "ind": "Energy"
       },
       {
        "n": "Bharti Airtel",
@@ -3825,7 +3941,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹2,360 → ₹2,400",
          "Aug 13, 2026"
         ]
-       ]
+       ],
+       "ind": "Telecoms"
       },
       {
        "n": "Larsen & Toubro",
@@ -3865,7 +3982,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹5,060",
          "Jun 15, 2026"
         ]
-       ]
+       ],
+       "ind": "Construction & engineering"
       },
       {
        "n": "Bajaj Finance",
@@ -3920,7 +4038,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹1,045",
          "May 14, 2026"
         ]
-       ]
+       ],
+       "ind": "Finance"
       },
       {
        "n": "HDFC Life Insurance",
@@ -3959,7 +4078,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "₹750 → ₹700",
          "Jul 16, 2026"
         ]
-       ]
+       ],
+       "ind": "Insurance"
       }
      ],
      "histDates": [
@@ -4461,7 +4581,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Semiconductors"
       },
       {
        "n": "Advanced Micro Devices",
@@ -4482,7 +4603,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Semiconductors"
       },
       {
        "n": "Micron Technology",
@@ -4503,7 +4625,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Semiconductors"
       },
       {
        "n": "Intel",
@@ -4524,7 +4647,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Broadcom",
@@ -4545,7 +4669,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Semiconductors"
       },
       {
        "n": "Arm Holdings",
@@ -4566,7 +4691,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Analog Devices",
@@ -4587,7 +4713,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Semiconductors"
       },
       {
        "n": "Semtech",
@@ -4608,7 +4735,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Semiconductors"
       },
       {
        "n": "Microsoft",
@@ -4629,7 +4757,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Software"
       },
       {
        "n": "Amazon",
@@ -4650,7 +4779,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Internet"
       },
       {
        "n": "Meta Platforms",
@@ -4671,7 +4801,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Internet"
       },
       {
        "n": "Alphabet",
@@ -4692,7 +4823,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Internet"
       },
       {
        "n": "Apple",
@@ -4713,7 +4845,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close"
+       "pt": "Intraday ~2:30 pm ET, 25 Nov (JBizNews); 1D = 24 Nov close",
+       "ind": "Technology hardware"
       },
       {
        "n": "Insmed",
@@ -4734,7 +4867,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Cogent Biosciences",
@@ -4755,7 +4889,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Zoom Communications",
@@ -4776,7 +4911,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "3:21–3:22 pm ET, 24 Nov (delayed quote)"
+       "pt": "3:21–3:22 pm ET, 24 Nov (delayed quote)",
+       "ind": "Software"
       },
       {
        "n": "Dollar Tree",
@@ -4797,7 +4933,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Retail"
       },
       {
        "n": "Fluence Energy",
@@ -4818,7 +4955,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Energy"
       },
       {
        "n": "Embecta",
@@ -4839,7 +4977,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Pharma & healthcare"
       }
      ],
      "histDates": [
@@ -4877,7 +5016,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · 25 Nov price not yet verified",
-       "cn": "+3.07% (24 Nov)"
+       "cn": "+3.07% (24 Nov)",
+       "ind": "Data & information services"
       },
       {
        "n": "AO World",
@@ -4899,7 +5039,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:35 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−9.35% (24 Nov)"
+       "cn": "−9.35% (24 Nov)",
+       "ind": "Retail"
       },
       {
        "n": "AstraZeneca",
@@ -4921,7 +5062,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · 25 Nov price not yet verified · today: higher intraday",
-       "cn": "+2.90% (24 Nov)"
+       "cn": "+2.90% (24 Nov)",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Compass Group",
@@ -4943,7 +5085,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:40 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "+4.20% (24 Nov)"
+       "cn": "+4.20% (24 Nov)",
+       "ind": "Consumer services"
       },
       {
        "n": "Experian",
@@ -4965,7 +5108,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · 25 Nov price not yet verified",
-       "cn": "+4.61% (24 Nov)"
+       "cn": "+4.61% (24 Nov)",
+       "ind": "Data & information services"
       },
       {
        "n": "London Stock Exchange Group",
@@ -4987,7 +5131,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:49 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "+2.41% (24 Nov)"
+       "cn": "+2.41% (24 Nov)",
+       "ind": "Data & information services"
       },
       {
        "n": "Sage Group",
@@ -5009,7 +5154,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:49 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "+2.10% (24 Nov)"
+       "cn": "+2.10% (24 Nov)",
+       "ind": "Software"
       },
       {
        "n": "Balfour Beatty",
@@ -5031,7 +5177,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:37 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "+1.67% (24 Nov)"
+       "cn": "+1.67% (24 Nov)",
+       "ind": "Construction & engineering"
       },
       {
        "n": "Anglo American",
@@ -5053,7 +5200,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−5.70% (24 Nov)"
+       "cn": "−5.70% (24 Nov)",
+       "ind": "Mining"
       },
       {
        "n": "Glencore",
@@ -5075,7 +5223,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:37 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−4.79% (24 Nov)"
+       "cn": "−4.79% (24 Nov)",
+       "ind": "Mining"
       },
       {
        "n": "Weir Group",
@@ -5097,7 +5246,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−4.80% (24 Nov)"
+       "cn": "−4.80% (24 Nov)",
+       "ind": "Industrials"
       },
       {
        "n": "Standard Chartered",
@@ -5118,7 +5268,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 16:30 GMT, 25 Nov (Alliance News via AOL/Share Talk)"
+       "pt": "Close 16:30 GMT, 25 Nov (Alliance News via AOL/Share Talk)",
+       "ind": "Banks"
       },
       {
        "n": "Barclays",
@@ -5140,7 +5291,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:49 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−2.54% (24 Nov)"
+       "cn": "−2.54% (24 Nov)",
+       "ind": "Banks"
       },
       {
        "n": "GSK",
@@ -5162,7 +5314,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · closed about +1.0% on 25 Nov (price not reported)",
-       "cn": "+2.50% (24 Nov)"
+       "cn": "+2.50% (24 Nov)",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Unilever",
@@ -5183,7 +5336,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 16:30 GMT, 25 Nov (Alliance News via AOL/Share Talk)"
+       "pt": "Close 16:30 GMT, 25 Nov (Alliance News via AOL/Share Talk)",
+       "ind": "Consumer staples"
       },
       {
        "n": "HSBC Holdings",
@@ -5205,7 +5359,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Latest London price, 4:49 pm GMT, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−2.73% (24 Nov)"
+       "cn": "−2.73% (24 Nov)",
+       "ind": "Banks"
       },
       {
        "n": "Antofagasta",
@@ -5227,7 +5382,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−8.10% (24 Nov)"
+       "cn": "−8.10% (24 Nov)",
+       "ind": "Mining"
       },
       {
        "n": "Fresnillo",
@@ -5249,7 +5405,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Close, 24 Nov · 25 Nov price not yet verified",
-       "cn": "−4.90% (24 Nov)"
+       "cn": "−4.90% (24 Nov)",
+       "ind": "Mining"
       }
      ],
      "histDates": [
@@ -5286,7 +5443,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 3:30 pm IST, 25 Nov; 1D derived from reported % move"
+       "pt": "Close 3:30 pm IST, 25 Nov; 1D derived from reported % move",
+       "ind": "Consumer staples"
       },
       {
        "n": "Tata Steel",
@@ -5307,7 +5465,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 3:30 pm IST, 25 Nov"
+       "pt": "Close 3:30 pm IST, 25 Nov",
+       "ind": "Metals & steel"
       },
       {
        "n": "APL Apollo Tubes",
@@ -5328,7 +5487,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (Multibagg top-traded table)"
+       "pt": "Close 25 Nov (Multibagg top-traded table)",
+       "ind": "Metals & steel"
       },
       {
        "n": "Hindalco Industries",
@@ -5349,7 +5509,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 3:30 pm IST, 25 Nov"
+       "pt": "Close 3:30 pm IST, 25 Nov",
+       "ind": "Metals & steel"
       },
       {
        "n": "JSW Steel",
@@ -5370,7 +5531,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 3:30 pm IST, 25 Nov (reported % change; differs from the stored 23 Nov close)"
+       "pt": "Close 3:30 pm IST, 25 Nov (reported % change; differs from the stored 23 Nov close)",
+       "ind": "Metals & steel"
       },
       {
        "n": "Axis Bank",
@@ -5391,7 +5553,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "~12:00 pm IST, 25 Nov (HDFC Sky snapshot) · verified close not available"
+       "pt": "~12:00 pm IST, 25 Nov (HDFC Sky snapshot) · verified close not available",
+       "ind": "Banks"
       },
       {
        "n": "HDFC Bank",
@@ -5412,7 +5575,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (Multibagg top-traded table)"
+       "pt": "Close 25 Nov (Multibagg top-traded table)",
+       "ind": "Banks"
       },
       {
        "n": "ICICI Bank",
@@ -5433,7 +5597,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (Multibagg top-traded table)"
+       "pt": "Close 25 Nov (Multibagg top-traded table)",
+       "ind": "Banks"
       },
       {
        "n": "State Bank of India",
@@ -5455,7 +5620,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "Banks"
       },
       {
        "n": "Tata Consultancy Services",
@@ -5477,7 +5643,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "IT services"
       },
       {
        "n": "Tech Mahindra",
@@ -5499,7 +5666,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "IT services"
       },
       {
        "n": "HCLTech",
@@ -5521,7 +5689,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "IT services"
       },
       {
        "n": "Infosys",
@@ -5542,7 +5711,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov, calculated from reported % move (+2.27%)"
+       "pt": "Close 25 Nov, calculated from reported % move (+2.27%)",
+       "ind": "IT services"
       },
       {
        "n": "Shriram Finance",
@@ -5563,7 +5733,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (HDFC Sky market close report); % change as reported (differs slightly from the stored 23 Nov close)"
+       "pt": "Close 25 Nov (HDFC Sky market close report); % change as reported (differs slightly from the stored 23 Nov close)",
+       "ind": "Finance"
       },
       {
        "n": "Maruti Suzuki",
@@ -5585,7 +5756,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "Autos & parts"
       },
       {
        "n": "PB Fintech (Policybazaar)",
@@ -5606,7 +5778,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (Multibagg top-traded table)"
+       "pt": "Close 25 Nov (Multibagg top-traded table)",
+       "ind": "Insurance"
       },
       {
        "n": "Bharat Forge",
@@ -5628,7 +5801,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "Autos & parts"
       },
       {
        "n": "Polycab India",
@@ -5650,7 +5824,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "Industrials"
       },
       {
        "n": "Reliance Industries",
@@ -5671,7 +5846,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (Multibagg top-traded table)"
+       "pt": "Close 25 Nov (Multibagg top-traded table)",
+       "ind": "Energy"
       },
       {
        "n": "Bharti Airtel",
@@ -5692,7 +5868,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (HDFC Sky market close report)"
+       "pt": "Close 25 Nov (HDFC Sky market close report)",
+       "ind": "Telecoms"
       },
       {
        "n": "Larsen & Toubro",
@@ -5714,7 +5891,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null
        ],
        "pt": "Last close 23 Nov · 25 Nov intraday price not yet verified",
-       "cn": "n/a today"
+       "cn": "n/a today",
+       "ind": "Construction & engineering"
       },
       {
        "n": "Bajaj Finance",
@@ -5735,7 +5913,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 25 Nov (HDFC Sky market close report); 1D derived from reported % move"
+       "pt": "Close 25 Nov (HDFC Sky market close report); 1D derived from reported % move",
+       "ind": "Finance"
       },
       {
        "n": "HDFC Life Insurance",
@@ -5756,7 +5935,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 3:30 pm IST, 25 Nov; 1D derived from reported % move"
+       "pt": "Close 3:30 pm IST, 25 Nov; 1D derived from reported % move",
+       "ind": "Insurance"
       }
      ],
      "histDates": [
@@ -6079,7 +6259,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Advanced Micro Devices",
@@ -6100,7 +6281,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Micron Technology",
@@ -6121,7 +6303,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Intel",
@@ -6142,7 +6325,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Broadcom",
@@ -6163,7 +6347,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Arm Holdings",
@@ -6184,7 +6369,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Semiconductors"
       },
       {
        "n": "Analog Devices",
@@ -6205,7 +6391,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Semiconductors"
       },
       {
        "n": "Semtech",
@@ -6226,7 +6413,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Semiconductors"
       },
       {
        "n": "Microsoft",
@@ -6247,7 +6435,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Software"
       },
       {
        "n": "Amazon",
@@ -6268,7 +6457,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Internet"
       },
       {
        "n": "Meta Platforms",
@@ -6289,7 +6479,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Internet"
       },
       {
        "n": "Alphabet",
@@ -6310,7 +6501,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)"
+       "pt": "Close 4:00 pm ET, 24 Nov (delayed quote)",
+       "ind": "Internet"
       },
       {
        "n": "Apple",
@@ -6331,7 +6523,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (reported close)"
+       "pt": "Close 4:00 pm ET, 24 Nov (reported close)",
+       "ind": "Technology hardware"
       },
       {
        "n": "Insmed",
@@ -6352,7 +6545,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Cogent Biosciences",
@@ -6373,7 +6567,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Zoom Communications",
@@ -6394,7 +6589,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "3:21–3:22 pm ET, 24 Nov (delayed quote)"
+       "pt": "3:21–3:22 pm ET, 24 Nov (delayed quote)",
+       "ind": "Software"
       },
       {
        "n": "Dollar Tree",
@@ -6415,7 +6611,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov"
+       "pt": "Close 4:00 pm ET, 24 Nov",
+       "ind": "Retail"
       },
       {
        "n": "Fluence Energy",
@@ -6436,7 +6633,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Energy"
       },
       {
        "n": "Embecta",
@@ -6457,7 +6655,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)"
+       "pt": "Close 4:00 pm ET, 24 Nov (calculated from reported % move)",
+       "ind": "Pharma & healthcare"
       }
      ]
     },
@@ -6487,7 +6686,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Data & information services"
       },
       {
        "n": "AO World",
@@ -6508,7 +6708,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:35 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:35 pm GMT, 24 Nov",
+       "ind": "Retail"
       },
       {
        "n": "AstraZeneca",
@@ -6529,7 +6730,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Compass Group",
@@ -6550,7 +6752,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:40 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:40 pm GMT, 24 Nov",
+       "ind": "Consumer services"
       },
       {
        "n": "Experian",
@@ -6571,7 +6774,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Data & information services"
       },
       {
        "n": "London Stock Exchange Group",
@@ -6592,7 +6796,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:49 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:49 pm GMT, 24 Nov",
+       "ind": "Data & information services"
       },
       {
        "n": "Sage Group",
@@ -6613,7 +6818,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:49 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:49 pm GMT, 24 Nov",
+       "ind": "Software"
       },
       {
        "n": "Balfour Beatty",
@@ -6634,7 +6840,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:37 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:37 pm GMT, 24 Nov",
+       "ind": "Construction & engineering"
       },
       {
        "n": "Anglo American",
@@ -6655,7 +6862,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Mining"
       },
       {
        "n": "Glencore",
@@ -6676,7 +6884,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:37 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:37 pm GMT, 24 Nov",
+       "ind": "Mining"
       },
       {
        "n": "Weir Group",
@@ -6697,7 +6906,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Industrials"
       },
       {
        "n": "Standard Chartered",
@@ -6718,7 +6928,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:40 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:40 pm GMT, 24 Nov",
+       "ind": "Banks"
       },
       {
        "n": "Barclays",
@@ -6739,7 +6950,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:49 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:49 pm GMT, 24 Nov",
+       "ind": "Banks"
       },
       {
        "n": "GSK",
@@ -6760,7 +6972,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Pharma & healthcare"
       },
       {
        "n": "Unilever",
@@ -6781,7 +6994,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:40 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:40 pm GMT, 24 Nov",
+       "ind": "Consumer staples"
       },
       {
        "n": "HSBC Holdings",
@@ -6802,7 +7016,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Latest London price, 4:49 pm GMT, 24 Nov"
+       "pt": "Latest London price, 4:49 pm GMT, 24 Nov",
+       "ind": "Banks"
       },
       {
        "n": "Antofagasta",
@@ -6823,7 +7038,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Mining"
       },
       {
        "n": "Fresnillo",
@@ -6844,7 +7060,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Close, 24 Nov"
+       "pt": "Close, 24 Nov",
+       "ind": "Mining"
       }
      ]
     },
@@ -6875,7 +7092,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Metals & steel"
       },
       {
        "n": "APL Apollo Tubes",
@@ -6896,7 +7114,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Metals & steel"
       },
       {
        "n": "Hindalco Industries",
@@ -6917,7 +7136,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Metals & steel"
       },
       {
        "n": "JSW Steel",
@@ -6938,7 +7158,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Metals & steel"
       },
       {
        "n": "Axis Bank",
@@ -6959,7 +7180,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Banks"
       },
       {
        "n": "HDFC Bank",
@@ -6980,7 +7202,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Banks"
       },
       {
        "n": "ICICI Bank",
@@ -7001,7 +7224,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Banks"
       },
       {
        "n": "State Bank of India",
@@ -7022,7 +7246,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Banks"
       },
       {
        "n": "Tata Consultancy Services",
@@ -7043,7 +7268,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "IT services"
       },
       {
        "n": "Tech Mahindra",
@@ -7064,7 +7290,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "IT services"
       },
       {
        "n": "HCLTech",
@@ -7085,7 +7312,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "IT services"
       },
       {
        "n": "Infosys",
@@ -7106,7 +7334,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "IT services"
       },
       {
        "n": "Shriram Finance",
@@ -7127,7 +7356,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Finance"
       },
       {
        "n": "Maruti Suzuki",
@@ -7148,7 +7378,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Autos & parts"
       },
       {
        "n": "PB Fintech (Policybazaar)",
@@ -7169,7 +7400,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Insurance"
       },
       {
        "n": "Bharat Forge",
@@ -7190,7 +7422,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Autos & parts"
       },
       {
        "n": "Polycab India",
@@ -7211,7 +7444,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Industrials"
       },
       {
        "n": "Reliance Industries",
@@ -7232,7 +7466,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Energy"
       },
       {
        "n": "Bharti Airtel",
@@ -7253,7 +7488,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Telecoms"
       },
       {
        "n": "Larsen & Toubro",
@@ -7274,7 +7510,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         null,
         null
        ],
-       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)"
+       "pt": "Last close, 23 Nov 15:30 IST (market shut 24 Nov)",
+       "ind": "Construction & engineering"
       }
      ],
      "showingPrev": "Showing the previous session: Monday, 23 November 2026.",
@@ -7459,19 +7696,53 @@ function logo(s,id){const sym=s.t.replace(/\.$/,""),fav="logos/"+encodeURICompon
  return '<div class="logo"><img alt="" loading="lazy" src="'+esc(LOGOS[id+":"+sym]||fav)+'" data-f="'+esc(fav)+'" data-i="'+esc(initials(s.t))+'"></div>';}
 function card(s,id){const cur=curOf(s,id);
  const hist=s.h?'<div class="hist">'+s.h.map((v,i)=>{let c="";if(v!=null&&s.pn!=null){const ch=(s.pn/v-1)*100;c='<span class="c num '+cls(ch)+'">'+(ch>0?"+":ch<0?"−":"")+Math.abs(ch).toFixed(1)+'%</span>';}else c='<span class="c flat">–</span>';return '<div><span class="k">'+HL[i]+'</span><span class="v num">'+hv(v)+'</span>'+c+'</div>';}).join("")+'</div>':"";
- return '<article class="card">'+'<div class="ct">'+logo(s,id)+'<div class="nm"><b>'+esc(s.n)+'</b><span>'+esc(s.t)+'</span></div><span class="rb b'+esc(s.cat)+'">'+esc(CN[s.cat]||s.cat)+'</span></div>'+
+ return '<article class="card">'+'<div class="ct">'+logo(s,id)+'<div class="nm"><b>'+esc(s.n)+'</b><span>'+esc(s.t)+'</span></div><span class="rb b'+esc(s.cat)+'">'+esc(CN[s.cat]||s.cat)+'</span>'+starBtn(id,s)+'</div>'+
  '<div class="pr"><span class="p num">'+esc(s.p)+'</span><span class="cg num '+cls(s.c)+'">'+(s.cn?esc(s.cn):pct(s.c))+'</span></div>'+spark(s)+hist+
- (s.pt?'<p class="pt">'+esc(s.pt)+'</p>':"")+'<div class="cons">'+esc(s.cons)+'</div><p class="why">'+esc(s.why||"Reason n/a")+'</p>'+
- '<div class="links">'+(s.ir?'<a href="'+esc(s.ir)+'" target="_blank" rel="noopener">Company news</a>':"")+(s.src?'<a href="'+esc(s.src)+'" target="_blank" rel="noopener">Rating source</a>':"")+(anOf(id,s.t).rows.length?'<button type="button" class="anb" data-an="'+esc(id+"|"+s.t)+'">Analysts ('+anOf(id,s.t).rows.length+')</button>':"")+'</div></article>';}
+ (s.pt?'<p class="pt">'+esc(s.pt)+'</p>':"")+'<div class="cons">'+esc(s.cons)+'</div>'+(s.ind?'<p class="pt">'+esc(s.ind)+'</p>':'')+'<p class="why">'+esc(s.why||"Reason n/a")+'</p>'+
+ '<div class="links">'+(s.ir?'<a href="'+esc(s.ir)+'" target="_blank" rel="noopener">Company news</a>':"")+(s.src?'<a href="'+esc(s.src)+'" target="_blank" rel="noopener">Rating source</a>':"")+cmpBtn(id,s)+(anOf(id,s.t).rows.length?'<button type="button" class="anb" data-an="'+esc(id+"|"+s.t)+'">Analysts ('+anOf(id,s.t).rows.length+')</button>':"")+'</div></article>';}
 function hookLogos(root){root.querySelectorAll('.logo img').forEach(img=>{const next=()=>{const f=img.getAttribute('data-f');if(f&&img.src!==f){img.removeAttribute('data-f');img.src=f;return;}const b=img.parentNode;b.classList.add('fb');b.textContent=img.getAttribute('data-i');};
  img.addEventListener('error',next);img.addEventListener('load',()=>{if(img.naturalWidth<17)next();});if(img.complete&&img.naturalWidth===0)next();});}
+
+/* feat:v1 — shared helpers */
+const STO={get(k){try{return JSON.parse(localStorage.getItem(k)||"null");}catch(_){return null;}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(_){}}};
+const wkey=(id,tk)=>id+"|"+tk;
+let WL=new Set(Array.isArray(STO.get('ipulse-watch'))?STO.get('ipulse-watch'):[]);
+let CMP=[];
+const STAR='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" stroke-linejoin="round"/></svg>';
+const starBtn=(id,s)=>{const on=WL.has(wkey(id,s.t));return '<button type="button" class="star" data-w="'+esc(wkey(id,s.t))+'" aria-pressed="'+on+'" aria-label="'+(on?'Remove ':'Add ')+esc(s.n)+(on?' from':' to')+' watchlist" title="Watchlist">'+STAR+'</button>';};
+const cmpBtn=(id,s)=>{const on=CMP.includes(wkey(id,s.t));return '<button type="button" class="anb cmpb" data-cmp="'+esc(wkey(id,s.t))+'" aria-pressed="'+on+'">'+(on?'✓ Comparing':'+ Compare')+'</button>';};
+const SCORE={SB:4,B:3,H:2,S:1};
+const scoreLbl=v=>v>=3.5?"Strong Buy":v>=2.75?"Buy":v>=1.75?"Hold":"Sell";
+function findStock(k){const [id,tk]=k.split("|");const m=byId[id];const s=m&&m.stocks.find(x=>x.t===tk);if(s)return {s,id,day:t,isToday:true};
+ for(const d of days){const mm=d.markets.find(x=>x.id===id);const ss=mm&&mm.stocks.find(x=>x.t===tk);if(ss)return {s:ss,id,day:d,isToday:d===t};}return null;}
+function consInfo(s){const c=String(s.cons||"");const n=(c.match(/(\d+)\s+analysts/)||[])[1];const pt=(c.match(/avg PT\s*([^·]+)/)||[])[1];
+ const ptn=pt?parseFloat(pt.replace(/[^0-9.]/g,"")):null;return {n:n?+n:null,pt:pt?pt.trim():null,up:ptn&&s.pn?(ptn/s.pn-1)*100:null};}
+function hchg(s,i){const v=s.h&&s.h[i];return v!=null&&s.pn!=null?(s.pn/v-1)*100:null;}
+function bigChart(s,id){const lab=["1Y ago","6M ago","1M ago","1W ago","1D ago","Latest"];const raw=(s.h||[]).slice().reverse().concat([s.pn]);
+ const pts=raw.map((v,i)=>[i,v]).filter(p=>p[1]!=null);if(pts.length<2)return '<div class="bigc"><h4>Price history</h4><p class="cap">Not enough verified closing prices for a chart yet.</p></div>';
+ const W=600,H=230,L=12,R=12,T=26,B=34,vs=pts.map(p=>p[1]),lo=Math.min(...vs),hi=Math.max(...vs),pad=(hi-lo)*0.12||hi*0.02||1;
+ const y0=lo-pad,y1=hi+pad,X=i=>L+i/5*(W-L-R),Y=v=>T+(y1-v)/(y1-y0)*(H-T-B);
+ const up=vs[vs.length-1]>=vs[0],col=up?"var(--up)":"var(--down)",cur=curOf(s,id);
+ const line=pts.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+" "+Y(p[1]).toFixed(1)).join(" ");
+ const area=line+" L"+X(pts[pts.length-1][0]).toFixed(1)+" "+(H-B)+" L"+X(pts[0][0]).toFixed(1)+" "+(H-B)+" Z";
+ const gid="g"+Math.random().toString(36).slice(2,8);
+ let g='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Closing prices at six points over the past year"><defs><linearGradient id="'+gid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+(up?'#22c55e':'#ef4444')+'" stop-opacity=".22"/><stop offset="1" stop-color="'+(up?'#22c55e':'#ef4444')+'" stop-opacity="0"/></linearGradient></defs>';
+ [0,1,2,3,4,5].forEach(i=>{g+='<line x1="'+X(i)+'" x2="'+X(i)+'" y1="'+T+'" y2="'+(H-B)+'" stroke="var(--line)" stroke-dasharray="3 4"/><text x="'+X(i)+'" y="'+(H-10)+'" text-anchor="'+(i===0?'start':i===5?'end':'middle')+'" font-size="12" fill="var(--muted)">'+lab[i]+'</text>';});
+ g+='<path d="'+area+'" fill="url(#'+gid+')"/><path d="'+line+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round"/>';
+ pts.forEach((p,k)=>{const x=X(p[0]),yy=Y(p[1]);g+='<circle cx="'+x+'" cy="'+yy+'" r="4" fill="var(--card)" stroke="'+col+'" stroke-width="2"/><text x="'+x+'" y="'+(yy-10)+'" text-anchor="'+(p[0]===0?'start':p[0]===5?'end':'middle')+'" font-size="12" font-weight="600" fill="var(--ink)">'+esc(fmt(p[1],cur))+'</text>';});
+ g+='</svg>';const ch=(vs[vs.length-1]/vs[0]-1)*100;
+ return '<div class="bigc"><h4>Price history</h4><span class="num '+cls(ch)+'" style="font-weight:700">'+pct(ch)+'</span> <span class="cap" style="display:inline">since '+lab[pts[0][0]].replace(" ago"," ago")+'</span>'+g+
+ '<p class="cap">The line joins verified closing prices on these dates; it isn’t a full daily chart. Missing points weren’t verified.</p></div>';}
 const tabs=document.getElementById('tabs');
 const REG={us:"United States",uk:"United Kingdom",in:"India"};
 tabs.innerHTML=t.markets.map(m=>{const a=avg(m.id,t);const st=live(m)?'Open now':(m.closed?'Holiday':'Closed');return '<button class="tab" role="tab" id="tab-'+esc(m.id)+'" data-id="'+esc(m.id)+'"><span class="tn">'+(live(m)?'<span class="dot live"></span>':'')+esc((SHORT[m.id]||m.name))+'</span><span class="ts">'+esc(REG[m.id]||'')+' · '+st+' · '+(m.stocks||[]).length+' stocks</span><span class="pc num '+cls(a)+'">'+pct(a)+'</span></button>';}).join("");
 tabs.addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;state.tab=b.dataset.id;state.cat="all";state.q="";try{history.replaceState(null,"","#"+state.tab);}catch(_){}render();});
-function list(m){const q=state.q.trim().toLowerCase();let xs=m.stocks.filter(s=>(state.cat==="all"||s.cat===state.cat)&&(!q||(s.n+" "+s.t).toLowerCase().includes(q)));
+function list(m){const q=state.q.trim().toLowerCase();let xs=m.stocks.filter(s=>(state.cat==="all"||(state.cat==="watch"?WL.has(wkey(m.id,s.t)):s.cat===state.cat))&&(!q||(s.n+" "+s.t).toLowerCase().includes(q)));
  if(state.sort==="up")xs.sort((a,b)=>(b.c??-1e9)-(a.c??-1e9));if(state.sort==="down")xs.sort((a,b)=>(a.c??1e9)-(b.c??1e9));if(state.sort==="name")xs.sort((a,b)=>a.n.localeCompare(b.n));return xs;}
-function cards(m){const xs=list(m);if(!xs.length)return '<p class="empty" style="margin-top:20px">No stocks match. Clear the search or pick another rating.</p>';
+function cards(m){const xs=list(m);if(!xs.length)return '<p class="empty" style="margin-top:20px">'+(state.cat==="watch"?'None of your watchlist stocks are in this market. Tap ☆ on a card to add one.':'No stocks match. Clear the search or pick another rating.')+'</p>';
+ if(state.sort==="sector"){const g={};xs.forEach(s=>{(g[s.ind||"Other"]=g[s.ind||"Other"]||[]).push(s);});
+  return Object.entries(g).sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0])).map(([k,v])=>{const sc=v.reduce((a,s)=>a+(SCORE[s.cat]||2),0)/v.length;const cs=v.filter(s=>s.c!=null);const ac=cs.length?cs.reduce((a,s)=>a+s.c,0)/cs.length:null;
+   return '<div class="lane"><h3>'+esc(k)+'<small>'+v.length+' stock'+(v.length>1?'s':'')+' · average rating '+scoreLbl(sc)+' · average move <span class="num '+cls(ac)+'">'+pct(ac)+'</span></small></h3><div class="grid">'+v.map(s=>card(s,m.id)).join("")+'</div></div>';}).join("");}
  if(state.sort!=="rating")return '<div class="grid" style="margin-top:22px">'+xs.map(s=>card(s,m.id)).join("")+'</div>';
  return CATS.map(c=>{const g=xs.filter(s=>s.cat===c[0]);if(!g.length)return "";return '<div class="lane"><h3><span class="rb b'+c[0]+'">'+c[1]+'</span><small>'+g.length+' stock'+(g.length>1?"s":"")+'</small></h3><div class="grid">'+g.map(s=>card(s,m.id)).join("")+'</div></div>';}).join("");}
 function render(){const m=byId[state.tab]||t.markets[0];state.tab=m.id;
@@ -7484,8 +7755,8 @@ function render(){const m=byId[state.tab]||t.markets[0];state.tab=m.id;
  el.innerHTML='<section class="mkt" role="tabpanel" aria-labelledby="tab-'+esc(m.id)+'"><div class="mhead"><div><h2>'+esc((SHORT[m.id]||m.name))+'</h2><span class="stat'+(live(m)?' open':'')+'">'+(live(m)?'<span class="dot live"></span>':'')+esc(stTxt)+'</span>'+
  (B?'<p class="bh">What the prices show</p>'+ul(B.times,'sm'):(m.closed&&m.showingPrev?ul([m.showingPrev],'sm'):''))+
  '<details class="tdet"><summary>Full timing details</summary><p>'+esc(m.time)+'</p></details></div><div><p class="bh">Today in brief</p>'+ul(moves)+'</div></div>'+
- '<div class="tools"><div class="seg" id="seg">'+[["all","All"]].concat(CATS).map(c=>{const k=c[0]==="all"?m.stocks.length:m.stocks.filter(s=>s.cat===c[0]).length;return '<button data-c="'+c[0]+'" aria-pressed="'+(state.cat===c[0])+'">'+c[1]+' <span style="color:var(--muted)">'+k+'</span></button>';}).join("")+'</div><span class="gap"></span>'+
- '<input id="q" type="search" placeholder="Find a company or ticker" aria-label="Find a company or ticker" value="'+esc(state.q)+'"><select id="sort" aria-label="Sort"><option value="rating">Group by rating</option><option value="up">Biggest gainers</option><option value="down">Biggest fallers</option><option value="name">A to Z</option></select></div><div id="cards">'+cards(m)+'</div></section>';
+ '<div class="tools"><div class="seg" id="seg">'+[["all","All"]].concat(CATS).concat([["watch","★ Watchlist"]]).map(c=>{const k=c[0]==="all"?m.stocks.length:c[0]==="watch"?m.stocks.filter(s=>WL.has(wkey(m.id,s.t))).length:m.stocks.filter(s=>s.cat===c[0]).length;return '<button data-c="'+c[0]+'" aria-pressed="'+(state.cat===c[0])+'">'+c[1]+' <span style="color:var(--muted)">'+k+'</span></button>';}).join("")+'</div><span class="gap"></span>'+
+ '<input id="q" type="search" placeholder="Find a company or ticker" aria-label="Find a company or ticker" value="'+esc(state.q)+'"><select id="sort" aria-label="Sort"><option value="rating">Group by rating</option><option value="sector">Group by sector</option><option value="up">Biggest gainers</option><option value="down">Biggest fallers</option><option value="name">A to Z</option></select></div><div id="cards">'+cards(m)+'</div></section>';
  el.querySelector('#sort').value=state.sort;
  el.querySelector('#seg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;state.cat=b.dataset.c;el.querySelectorAll('#seg button').forEach(x=>x.setAttribute('aria-pressed',x===b?"true":"false"));upd(m);});
  el.querySelector('#q').addEventListener('input',e=>{state.q=e.target.value;upd(m);});
@@ -7513,7 +7784,7 @@ const dlg=document.getElementById('dlg'),dlgB=document.getElementById('dlgB');
 document.getElementById('dlgX').addEventListener('click',()=>dlg.close());
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
 function openStock(s,id,note,warn){document.getElementById('dlgT').textContent=s.n+" · "+EXN[id];
- dlgB.innerHTML='<div class="src'+(warn?' warn':'')+'">'+esc(note)+'</div>'+card(s,id)+'<div class="extra">'+liveLinks(id,s.t).map(l=>'<a href="'+esc(l[1])+'" target="_blank" rel="noopener">'+esc(l[0])+'</a>').join("")+'</div>';
+ dlgB.innerHTML='<div class="src'+(warn?' warn':'')+'">'+esc(note)+'</div>'+card(s,id)+bigChart(s,id)+'<div class="extra">'+liveLinks(id,s.t).map(l=>'<a href="'+esc(l[1])+'" target="_blank" rel="noopener">'+esc(l[0])+'</a>').join("")+'</div>';
  hookLogos(dlgB);try{dlg.showModal();}catch(_){dlg.setAttribute('open','');}closeRes();}
 const fq=document.getElementById('fq'),fx=document.getElementById('fx'),fres=document.getElementById('fres');
 let sample=null,ctl=null,lastAI=[];
@@ -7576,8 +7847,83 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-an],[data-
  if(b.dataset.an){const [id,tk]=b.dataset.an.split("|");openStockAn(id,tk);}else if(b.dataset.anm)openMarketAn(b.dataset.anm);else if(b.dataset.firm)openFirm(b.dataset.firm);else if(b.dataset.all)openAllAn();});
 
 document.getElementById('footer').innerHTML='<div class="srcbox"><h3>Sources for analysis</h3><p>'+esc(PROV)+' Choose a market to see the banks, brokers and analysts behind each rating.</p><div class="srcs">'+t.markets.map(m=>{const fs=firmsOf([m.id]);return '<button type="button" class="srcbtn" data-anm="'+esc(m.id)+'">'+esc(SHORT[m.id]||m.name)+' analysts<span>'+fs.length+' banks and brokers · '+m.stocks.length+' stocks</span></button>';}).join("")+'<button type="button" class="srcbtn" data-all="1">All banks and brokers<span>'+firmsOf(t.markets.map(m=>m.id)).length+' across the three exchanges</span></button></div><p class="disc" style="margin:16px 0 0">Aggregated analyst ratings for information only — not investment advice.</p></div>';
+
+/* feat:v1 — market hours */
+const MH={us:{tz:"America/New_York",city:"New York",o:570,c:960},uk:{tz:"Europe/London",city:"London",o:480,c:990},in:{tz:"Asia/Kolkata",city:"Mumbai",o:555,c:930}};
+const HOL={us:["2026-12-25","2027-01-01"],uk:["2026-12-25","2026-12-28","2027-01-01"],in:["2026-12-25"]};
+const EARLY={"us:2026-11-27":780,"us:2026-12-24":780,"uk:2026-12-24":750,"uk:2026-12-31":750};
+function tzNow(tz,ms){const p={};new Intl.DateTimeFormat("en-GB",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23",weekday:"short"}).formatToParts(new Date(ms)).forEach(x=>p[x.type]=x.value);
+ return {date:p.year+"-"+p.month+"-"+p.day,wd:p.weekday,min:(+p.hour)*60+(+p.minute),hm:p.hour+":"+p.minute};}
+const dur=m=>{m=Math.max(0,Math.round(m));const d=Math.floor(m/1440),h=Math.floor(m%1440/60),mm=m%60;return (d?d+"d ":"")+(d||h?h+"h ":"")+mm+"m";};
+function isClosedDay(id,n){if(n.wd==="Sat"||n.wd==="Sun")return "Weekend";if((HOL[id]||[]).includes(n.date))return "Holiday";const m=byId[id];if(m&&m.closed&&t.date===n.date)return "Holiday";return "";}
+function sess(id,ms){const cfg=MH[id],n=tzNow(cfg.tz,ms),cl=EARLY[id+":"+n.date]||cfg.c,off=isClosedDay(id,n);
+ if(!off&&n.min>=cfg.o&&n.min<cl)return {n,open:true,left:cl-n.min,prog:(n.min-cfg.o)/(cl-cfg.o),early:cl!==cfg.c,cl};
+ let k=(!off&&n.min<cfg.o)?0:1;for(;k<10;k++){const nn=tzNow(cfg.tz,ms+k*864e5);if(!isClosedDay(id,nn))break;}
+ const wait=k===0?cfg.o-n.min:(k*1440-n.min+cfg.o);const nn=tzNow(cfg.tz,ms+k*864e5);return {n,open:false,off,wait,nextWd:k===0?"today":k===1?"tomorrow":nn.wd};}
+function hhmm(m){return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");}
+function drawHours(){const el=document.getElementById('hours');if(!el)return;const ms=Date.now();
+ el.innerHTML=t.markets.map(m=>{const id=m.id,cfg=MH[id];if(!cfg)return "";const s=sess(id,ms);
+  const pill=s.open?'<span class="pill open">Open</span>':s.off==="Holiday"?'<span class="pill hol">Holiday</span>':'<span class="pill">Closed</span>';
+  const cd=s.open?'<span class="cdl">Closes in '+dur(s.left)+' · at '+hhmm(s.cl)+(s.early?' (early close)':'')+'</span><span class="cds">Closes in '+dur(s.left)+'</span>':'<span class="cdl">Opens '+s.nextWd+' at '+hhmm(cfg.o)+' · in '+dur(s.wait)+'</span><span class="cds">Opens in '+dur(s.wait)+'</span>';
+  return '<div class="hr"><div class="h1"><b>'+esc(SHORT[id]||m.name)+'</b>'+pill+'</div><div class="clk num">'+s.n.hm+'<small>'+esc(cfg.city)+' time</small></div><div class="cd">'+cd+'</div>'+(s.open?'<div class="prog" aria-hidden="true"><i style="width:'+(s.prog*100).toFixed(1)+'%"></i></div>':'')+'</div>';}).join("");}
+drawHours();setInterval(drawHours,20000);
+
+/* feat:v1 — watchlist */
+function drawWL(){const el=document.getElementById('wlp');if(!el)return;const xs=[...WL].map(findStock).filter(Boolean);
+ if(!xs.length){el.innerHTML='<p class="empty">Your watchlist is empty. Tap ☆ on any stock card to keep it here, across all three markets.</p>';return;}
+ el.innerHTML='<div class="wl">'+xs.map(o=>{const s=o.s,k=wkey(o.id,s.t);return '<div class="wli"><button class="o" data-open="'+esc(k)+'"><b>'+esc(s.n)+'</b><span>'+esc(s.t)+' · '+esc(EXN[o.id])+(o.isToday?'':' · from '+esc(o.day.label))+'</span></button><span class="num" style="font-weight:600">'+esc(s.p)+'</span><span class="cg num '+cls(s.c)+'">'+(s.cn?esc(s.cn):pct(s.c))+'</span><span class="rb b'+esc(s.cat)+'">'+esc(CN[s.cat]||s.cat)+'</span><button class="xbtn" data-w="'+esc(k)+'" aria-label="Remove '+esc(s.n)+' from watchlist">×</button></div>';}).join("")+'</div>';}
+function syncBtns(){document.querySelectorAll('[data-w].star').forEach(b=>{const on=WL.has(b.dataset.w);b.setAttribute('aria-pressed',on);});
+ document.querySelectorAll('[data-cmp]').forEach(b=>{const on=CMP.includes(b.dataset.cmp);b.setAttribute('aria-pressed',on);b.textContent=on?'✓ Comparing':'+ Compare';});
+ const sb=document.querySelector('#seg button[data-c="watch"] span');if(sb){const m=byId[state.tab];sb.textContent=m?m.stocks.filter(s=>WL.has(wkey(m.id,s.t))).length:0;}}
+
+/* feat:v1 — what changed */
+const MON={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+function pd(x){const m=String(x||"").match(/([A-Z][a-z]{2})\s+(\d{1,2}),\s*(\d{4})/);return m&&MON[m[1]]!=null?Date.UTC(+m[3],MON[m[1]],+m[2]):null;}
+function drawChg(){const el=document.getElementById('chg');if(!el)return;const D0=Date.parse(t.date+"T00:00:00Z"),items=[],prev=days[1];
+ t.markets.forEach(m=>m.stocks.forEach(s=>{
+  if(prev){const pm=prev.markets.find(x=>x.id===m.id),ps=pm&&pm.stocks.find(x=>x.t===s.t);if(ps&&ps.cat&&s.cat&&ps.cat!==s.cat)items.push({d:D0,id:m.id,s,kind:(SCORE[s.cat]>SCORE[ps.cat])?"Up":"Down",txt:'Consensus '+CN[ps.cat]+' → '+CN[s.cat]});}
+  (s.an||[]).forEach(r=>{const a=String(r[3]||"");if(!/upgrad|downgrad|initiat/i.test(a))return;const dd=pd(r[5]);if(dd==null||D0-dd>14*864e5||dd>D0+864e5)return;
+   items.push({d:dd,id:m.id,s,kind:/upgrad/i.test(a)?"Up":/downgrad/i.test(a)?"Down":"New",txt:esc(r[1])+' '+(/initiat/i.test(a)?'starts at':/upgrad/i.test(a)?'upgrades to':'downgrades to')+' '+esc(r[2])+(r[4]&&r[4]!=="n/a"?' · target '+esc(r[4]):'')});});}));
+ items.sort((a,b)=>b.d-a.d);
+ if(!items.length){el.innerHTML='<p class="empty">No upgrades, downgrades or new coverage in the past two weeks among the stocks covered here.</p>';return;}
+ const fd=d=>new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"short",timeZone:"UTC"});
+ el.innerHTML='<div class="chg">'+items.map(o=>'<div class="ci"><span class="dt">'+fd(o.d)+'</span><span><span class="tag '+o.kind+'">'+(o.kind==="Up"?"Upgrade":o.kind==="Down"?"Downgrade":"New")+'</span><button data-open="'+esc(wkey(o.id,o.s.t))+'">'+esc(o.s.n)+'</button> <span style="color:var(--muted)">'+esc(o.s.t)+' · '+esc(EXN[o.id])+'</span><br>'+o.txt+'</span></div>').join("")+'</div>';}
+drawWL();drawChg();
+
+/* feat:v1 — compare */
+const cbar=document.getElementById('cmpbar');
+function drawBar(){if(!cbar)return;if(!CMP.length){cbar.hidden=true;return;}cbar.hidden=false;
+ cbar.innerHTML='<b>Compare</b><span>'+CMP.map(k=>esc(k.split("|")[1])).join(" · ")+(CMP.length<2?' · pick one more':'')+'</span>'+(CMP.length>1?'<button class="go" data-cgo="1">Compare '+CMP.length+'</button>':'')+'<button class="cl" data-cclr="1">Clear</button>';}
+function openCompare(){const xs=CMP.map(findStock).filter(Boolean);if(xs.length<2)return;
+ const row=(lab,f)=>'<tr><td>'+lab+'</td>'+xs.map(o=>'<td>'+f(o.s,o.id)+'</td>').join("")+'</tr>';
+ const ch=v=>'<span class="num '+cls(v)+'">'+pct(v)+'</span>';
+ openDlg('Compare '+xs.length+' stocks','<div class="scroll"><table class="ctab"><thead><tr><th></th>'+xs.map(o=>'<th>'+esc(o.s.n)+'<br><small style="color:var(--muted);font:500 13px var(--ft)">'+esc(o.s.t)+'</small></th>').join("")+'</tr></thead><tbody>'+
+  row('Exchange',(s,id)=>esc(EXN[id]))+row('Industry',s=>esc(s.ind||'n/a'))+row('Price',s=>'<b class="num">'+esc(s.p)+'</b>')+row('Today',s=>s.cn?esc(s.cn):ch(s.c))+
+  row('Consensus',s=>'<span class="rb b'+esc(s.cat)+'">'+esc(CN[s.cat]||s.cat)+'</span>')+row('Analysts',s=>{const c=consInfo(s);return c.n!=null?c.n:'n/a';})+
+  row('Average target',s=>{const c=consInfo(s);return c.pt?esc(c.pt):'n/a';})+row('Upside to target',s=>{const c=consInfo(s);return c.up!=null?ch(c.up):'n/a';})+
+  row('1 week',s=>ch(hchg(s,1)))+row('1 month',s=>ch(hchg(s,2)))+row('6 months',s=>ch(hchg(s,3)))+row('1 year',s=>ch(hchg(s,4)))+
+  '</tbody></table></div><p class="lead" style="margin-top:12px">Prices are in each market’s own currency, so compare percentages rather than prices. n/a means the figure wasn’t verified.</p>');}
+
+/* feat:v1 — clicks */
+document.addEventListener('click',e=>{const w=e.target.closest('[data-w]');if(w){const k=w.dataset.w;if(WL.has(k))WL.delete(k);else WL.add(k);STO.set('ipulse-watch',[...WL]);syncBtns();drawWL();if(state.cat==="watch"){const m=byId[state.tab];m&&upd(m);}return;}
+ const c=e.target.closest('[data-cmp]');if(c){const k=c.dataset.cmp;if(CMP.includes(k))CMP=CMP.filter(x=>x!==k);else{CMP.push(k);if(CMP.length>3)CMP.shift();}syncBtns();drawBar();return;}
+ if(e.target.closest('[data-cgo]')){openCompare();return;}if(e.target.closest('[data-cclr]')){CMP=[];syncBtns();drawBar();return;}
+ const o=e.target.closest('[data-open]');if(o){const f=findStock(o.dataset.open);if(f)openFromLocal(f);}});
 }
 }
 </script>
 
+<script>
+(function(){var box=document.getElementById('scrBox'),bar=document.querySelector('.scrbar'),mk='america',on=false;
+function dark(){var r=document.documentElement.getAttribute('data-theme');if(r)return r==='dark';return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches;}
+function load(){on=true;box.innerHTML='';var c=document.createElement('div');c.className='tradingview-widget-container';
+ var w=document.createElement('div');w.className='tradingview-widget-container__widget';c.appendChild(w);
+ var cp=document.createElement('div');cp.className='tradingview-widget-copyright';cp.innerHTML='<a href="https://www.tradingview.com/screener/" rel="noopener nofollow" target="_blank">Stock screener by TradingView</a>';c.appendChild(cp);
+ var s=document.createElement('script');s.src='https://s3.tradingview.com/external-embedding/embed-widget-screener.js';s.async=true;
+ s.text=JSON.stringify({width:'100%',height:640,defaultColumn:'overview',defaultScreen:'most_capitalized',market:mk,showToolbar:true,colorTheme:dark()?'dark':'light',isTransparent:true,locale:'en'});
+ c.appendChild(s);box.appendChild(c);}
+document.getElementById('scrGo').addEventListener('click',load);
+bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;mk=b.getAttribute('data-mk');
+ bar.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false');});if(on)load();});})();
+</script>
 </body></html>
