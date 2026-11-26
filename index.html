@@ -20,6 +20,9 @@
 --upbg:light-dark(#e2f4ea,#0f2e1e);--downbg:light-dark(#fde8e8,#3a1519);
 --SB:light-dark(#0a7d43,#45d98d);--B:light-dark(#3a9b6e,#8fd8b0);--H:light-dark(#a86f00,#f2c14e);--S:light-dark(#c62828,#ff7070);
 --fd:"Space Grotesk",system-ui,sans-serif;--ft:"Inter",system-ui,sans-serif}
+/* compat: fallback for browsers without light-dark() */
+@supports not (color:light-dark(#000,#fff)){:root{--bg:#ffffff;--ink:#0b0f1a;--muted:#4a5368;--line:#dfe4f0;--zone:#eef2ff;--card:#ffffff;--accent:#4f46e5;--up:#0a7d43;--down:#c62828;--upbg:#e2f4ea;--downbg:#fde8e8;--SB:#0a7d43;--B:#3a9b6e;--H:#a86f00;--S:#c62828}@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0a0d18;--ink:#e8ecf6;--muted:#9aa4bb;--line:#232a40;--zone:#11172c;--card:#0f1426;--accent:#a5b4fc;--up:#45d98d;--down:#ff7070;--upbg:#0f2e1e;--downbg:#3a1519;--SB:#45d98d;--B:#8fd8b0;--H:#f2c14e;--S:#ff7070}}:root[data-theme=dark]{--bg:#0a0d18;--ink:#e8ecf6;--muted:#9aa4bb;--line:#232a40;--zone:#11172c;--card:#0f1426;--accent:#a5b4fc;--up:#45d98d;--down:#ff7070;--upbg:#0f2e1e;--downbg:#3a1519;--SB:#45d98d;--B:#8fd8b0;--H:#f2c14e;--S:#ff7070}}
+
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--ft);overflow-x:clip;margin:0}
@@ -289,6 +292,7 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
     }
    ],
    "notes": [
+    "Updated at about 22:55 Budapest on Thu 26 Nov (21:55 London, 4:55 pm ET, 3:25 am IST Fri). All three markets remain closed: London and India figures are final 26 Nov closes; NASDAQ is shut for Thanksgiving (Wed 25 Nov closes shown) and reopens Fri 27 Nov for a shortened session ending 1:00 pm ET. No new verified closing prices were found this hour, so no figures changed; Rolls-Royce, Glencore and Standard Chartered still show labelled mid-morning 26 Nov prices. India opens Fri 27 Nov at 9:15 am IST.",
     "Updated at about 21:55 Budapest on Thu 26 Nov (20:55 London, 3:55 pm ET, 2:25 am IST Fri). All three markets remain closed: London and India figures are final 26 Nov closes; NASDAQ is shut for Thanksgiving (Wed 25 Nov closes shown) and reopens Fri 27 Nov for a shortened session ending 1:00 pm ET. No new verified closing prices were found this hour, so no figures changed; Rolls-Royce, Glencore and Standard Chartered still show labelled mid-morning 26 Nov prices. India opens Fri 27 Nov at 9:15 am IST.",
     "Updated at about 20:55 Budapest on Thu 26 Nov (19:55 London, 2:55 pm ET, 1:25 am IST Fri). All three markets remain closed: London and India figures are final 26 Nov closes; NASDAQ is shut for Thanksgiving and reopens Fri 27 Nov for a shortened session (early 1:00 pm ET close). No new verified closing prices were found this hour, so no figures changed; Rolls-Royce, Glencore and Standard Chartered still show labelled mid-morning 26 Nov prices. India opens Fri 27 Nov at 9:15 am IST (no exchange holiday).",
     "Updated at about 19:55 Budapest on Thu 26 Nov (18:55 London, 1:55 pm ET, 12:25 am IST Fri). All three markets are closed: London and India figures are final 26 Nov closes; NASDAQ was shut for Thanksgiving, so US figures remain Wednesday 25 Nov closes. This hour Endeavour Mining was added as a FTSE 100 mover (3,320p, up 184p per the PA close report; % change calculated). Its consensus comes from its Toronto listing on StockAnalysis (S&P Global, last refreshed 15 Sep), so price targets are in Canadian dollars. No other prices changed.",
