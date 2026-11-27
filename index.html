@@ -264,6 +264,50 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
 .secsum{font-size:14px;color:var(--muted);font-weight:500}
 .cds{display:none}
 @media(max-width:600px){.hours{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.hr{padding:10px;gap:4px}.hr .h1{flex-direction:column;align-items:flex-start;gap:4px}.hr .h1 b{font-size:14px}.hr .clk{font-size:18px}.hr .clk small{display:none}.hr .cd{font-size:12px}.cdl{display:none}.cds{display:inline}.pill{font-size:11px;padding:2px 8px}.wli{grid-template-columns:minmax(0,1fr) auto auto auto}.wli .rb{display:none}.ctab{font-size:13px}.ctab th,.ctab td{padding:7px 6px}}
+/* table:v1 */
+.tblsec{padding-block:30px 10px}
+.th1{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px}
+.th1 h2{font:600 clamp(24px,3.4vw,32px)/1.1 var(--fd);letter-spacing:-.02em;margin:0}
+.th1 .sub{margin:0}
+.tctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px}
+.tctl input,.tctl select{font:15px var(--ft);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-height:40px}
+.tctl input{flex:1 1 200px;max-width:280px}
+.tctl .rst{font:600 14px var(--ft);color:var(--accent);background:transparent;border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-height:40px;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{font:600 14px var(--ft);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;min-height:38px}
+.chips button small{font-weight:500;color:var(--muted);margin-left:4px}
+.chips button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips button[aria-selected=true] small{color:inherit;opacity:.75}
+.views{display:flex;gap:2px;margin-top:18px;border-bottom:1px solid var(--line);overflow-x:auto}
+.views button{font:600 15px var(--ft);color:var(--muted);background:transparent;border:0;border-bottom:2px solid transparent;padding:10px 14px;cursor:pointer;white-space:nowrap}
+.views button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent)}
+.twrap{max-height:min(74vh,820px);overflow:auto;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;background:var(--card)}
+.dt{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
+.dt th,.dt td{padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left}
+.dt th{position:sticky;top:0;z-index:2;background:var(--zone);font-size:13px;font-weight:600;color:var(--muted)}
+.dt th button{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+.dt th button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.dt th[aria-sort] button{color:var(--ink)}
+.dt th .ar{font-size:11px;opacity:.8}
+.dt .r{text-align:right}.dt th.r button{justify-content:flex-end}
+.dt td:first-child,.dt th:first-child{position:sticky;left:0;z-index:1;background:var(--card)}
+.dt th:first-child{z-index:3;background:var(--zone)}
+.dt tbody tr{cursor:pointer}
+.dt tbody tr:hover td{background:var(--zone)}
+.dt .sym{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--accent)}
+.dt .sym .star{width:28px;height:28px;border:0;border-radius:6px}
+.dt .sym .star svg{width:16px;height:16px}
+.dt .co{display:inline-block;vertical-align:middle;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.dt .ex{font-size:12px;font-weight:700;color:var(--muted)}
+.dt .rb{font-size:12px;padding:2px 7px}
+.dt .lt{font-size:13px;color:var(--muted);max-width:280px;overflow:hidden;text-overflow:ellipsis}
+.dt .na{color:var(--muted)}
+.tfoot{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:12px 2px;font-size:14px;color:var(--muted)}
+.tfoot select{font:14px var(--ft);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.pg{display:flex;gap:8px;align-items:center}
+.pg button{font:600 14px var(--ft);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer}
+.pg button:disabled{opacity:.4;cursor:default}
+@media(max-width:600px){.tctl input{max-width:none;flex-basis:100%}.tctl select{flex:1 1 45%}.dt{font-size:13px}.dt th,.dt td{padding:8px 9px}.dt .co{max-width:130px}}
 .legal{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}.legal p{margin:0;max-width:80ch}.legal nav{display:flex;gap:16px}.legal a{font-weight:600;text-decoration:none}.legal a:hover{text-decoration:underline}
 .scr{padding-block:36px 8px;border-top:1px solid var(--line);margin-top:28px}.scr h2{font:600 28px/1.1 var(--fd);margin:0 0 4px}.scrbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 12px}.scrbar button{font:600 14px var(--ft);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer;min-height:40px}.scrbar button[aria-selected=true]{background:linear-gradient(120deg,#0d1430,#312e81 70%,#134e4a 130%);color:#fff;border-color:#4f46e5}.scrbox{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);min-height:220px}.scrgate{display:grid;place-items:center;gap:14px;text-align:center;padding:40px 20px;max-width:620px;margin:0 auto}.scrgate p{margin:0;color:var(--muted);font-size:15px}.scrgate b{color:var(--ink)}.scrgo{font:600 15px var(--ft);color:#fff;background:linear-gradient(90deg,#6366f1,#14b8a6);border:0;border-radius:10px;padding:12px 20px;cursor:pointer}.scrbox .tradingview-widget-copyright{font-size:13px;padding:8px 12px;color:var(--muted)}</style>
 
@@ -283,8 +327,23 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
   <div class="panel"><h2 id="boardTitle">Index moves</h2><p class="sub">Change on the session. A green dot marks a market still trading, so its figure is intraday.</p><div class="board" id="board"></div></div>
   <div class="panel"><h2>What analysts say</h2><p class="sub">Stocks covered in each market, by consensus rating.</p><div class="mix" id="mix"></div>
   <div class="legend"><span><i class="bSB"></i>Strong Buy</span><span><i class="bB"></i>Buy</span><span><i class="bH"></i>Hold</span><span><i class="bS"></i>Sell</span></div></div>
-</div><div class="in top2 row2"><div class="panel"><h2>Your watchlist</h2><p class="sub">Saved in this browser only. Tap the star on any stock to add it.</p><div id="wlp"></div></div><div class="panel"><h2>What changed</h2><p class="sub">Analyst upgrades, downgrades and new coverage in the past two weeks, plus consensus changes since the previous day.</p><div id="chg"></div></div></div></section>
+</div></section>
 
+<section class="band tblsec" id="table" aria-labelledby="tT"><div class="in">
+<div class="th1"><h2 id="tT">All covered stocks</h2><p class="sub" id="tcount"></p></div>
+<div class="tctl" role="group" aria-label="Table filters">
+<div class="chips" id="tex" role="tablist" aria-label="Exchange"></div>
+<label class="vh" for="tq">Filter by name or symbol</label><input id="tq" type="search" placeholder="Filter by name or symbol" autocomplete="off">
+<label class="vh" for="tind">Industry</label><select id="tind"></select>
+<label class="vh" for="trt">Rating</label><select id="trt"><option value="">All ratings</option><option value="SB">Strong Buy</option><option value="B">Buy</option><option value="H">Hold</option><option value="S">Sell</option></select>
+<label class="vh" for="tsz">Company size</label><select id="tsz"><option value="">All sizes</option><option value="mega">Mega cap (over $200B)</option><option value="large">Large cap ($10B–200B)</option><option value="mid">Mid cap ($2B–10B)</option><option value="small">Small cap (under $2B)</option></select>
+<label class="vh" for="tmv">Move today</label><select id="tmv"><option value="">Up or down</option><option value="up">Up today</option><option value="down">Down today</option></select>
+<button type="button" class="rst" id="treset">Reset</button>
+</div>
+<div class="views" id="tview" role="tablist" aria-label="Table view"><button type="button" role="tab" data-v="ov">Overview</button><button type="button" role="tab" data-v="pf">Performance</button><button type="button" role="tab" data-v="an">Analysts</button></div>
+<div class="twrap"><table class="dt" id="dt"><thead></thead><tbody></tbody></table></div>
+<div class="tfoot"><span id="tnote"></span><span class="pg"><label for="tn">Rows</label><select id="tn"><option>25</option><option selected>50</option><option>100</option><option value="0">All</option></select><button type="button" id="tprev" aria-label="Previous page">‹ Prev</button><span id="tpage"></span><button type="button" id="tnext" aria-label="Next page">Next ›</button></span></div>
+</div></section>
 <nav class="tabs band" aria-label="Markets"><div class="in"><div class="tabhd"><b>Choose a market</b><span>The stock cards, ratings and trend below change with your choice.</span></div><div class="tablist" role="tablist" id="tabs"></div></div></nav>
 <main class="band"><div class="in" id="market"></div>
 <section class="in scr" id="screener" aria-labelledby="scrT">
@@ -464,7 +523,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (45 analysts). Their average target is close to the price."
+       "why": "Most analysts say Buy (45 analysts). Their average target is close to the price.",
+       "mc": 5180000000000
       },
       {
        "n": "NVIDIA",
@@ -529,7 +589,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (63 analysts). Their average target is about 63% above the price. Bernstein upgraded it to Outperform on 24 Nov."
+       "why": "Most analysts say Buy (63 analysts). Their average target is about 63% above the price. Bernstein upgraded it to Outperform on 24 Nov.",
+       "mc": 3930000000000
       },
       {
        "n": "Microsoft",
@@ -594,7 +655,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (58 analysts). Their average target is about 30% above the price."
+       "why": "Most analysts are very positive (58 analysts). Their average target is about 30% above the price.",
+       "mc": 3890000000000
       },
       {
        "n": "Alphabet",
@@ -659,7 +721,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (58 analysts). Their average target is about 45% above the price."
+       "why": "Most analysts are very positive (58 analysts). Their average target is about 45% above the price.",
+       "mc": 3640000000000
       },
       {
        "n": "Amazon",
@@ -724,7 +787,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (62 analysts). Their average target is about 34% above the price. It fell 3.1% in the latest session."
+       "why": "Most analysts are very positive (62 analysts). Their average target is about 34% above the price. It fell 3.1% in the latest session.",
+       "mc": 2880000000000
       },
       {
        "n": "SpaceX (Space Exploration Technologies)",
@@ -789,7 +853,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (39 analysts). Their average target is about 102% above the price."
+       "why": "Most analysts say Buy (39 analysts). Their average target is about 102% above the price.",
+       "mc": 1890000000000
       },
       {
        "n": "Broadcom",
@@ -854,7 +919,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (51 analysts). Their average target is about 75% above the price."
+       "why": "Most analysts are very positive (51 analysts). Their average target is about 75% above the price.",
+       "mc": 1660000000000
       },
       {
        "n": "Meta Platforms",
@@ -919,7 +985,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (62 analysts). Their average target is about 39% above the price. It was one of the few big tech gainers on 25 Nov."
+       "why": "Most analysts are very positive (62 analysts). Their average target is about 39% above the price. It was one of the few big tech gainers on 25 Nov.",
+       "mc": 1640000000000
       },
       {
        "n": "Tesla",
@@ -943,7 +1010,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
        "pt": "Close 4:00 pm ET, Wed 25 Nov (StockAnalysis price history); 1D = 24 Nov close",
        "an": [],
        "core": 1,
-       "why": "Most analysts say Buy (37 analysts). Their average target is about 24% below the price."
+       "why": "Most analysts say Buy (37 analysts). Their average target is about 24% below the price.",
+       "mc": 1540000000000
       },
       {
        "n": "Walmart",
@@ -1008,7 +1076,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (43 analysts). Their average target is close to the price."
+       "why": "Most analysts say Buy (43 analysts). Their average target is close to the price.",
+       "mc": 1020000000000
       },
       {
        "n": "Micron Technology",
@@ -1073,7 +1142,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (49 analysts). Their average target is about 160% above the price. One bank recently turned cautious on a possible 2027 memory oversupply."
+       "why": "Most analysts are very positive (49 analysts). Their average target is about 160% above the price. One bank recently turned cautious on a possible 2027 memory oversupply.",
+       "mc": 880600000000
       },
       {
        "n": "Advanced Micro Devices",
@@ -1138,7 +1208,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (54 analysts). Their average target is about 62% above the price."
+       "why": "Most analysts are very positive (54 analysts). Their average target is about 62% above the price.",
+       "mc": 875900000000
       },
       {
        "n": "ASML Holding",
@@ -1203,7 +1274,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (41 analysts). Their average target is about 62% above the price."
+       "why": "Most analysts are very positive (41 analysts). Their average target is about 62% above the price.",
+       "mc": 564940000000
       },
       {
        "n": "Costco Wholesale",
@@ -1268,7 +1340,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (42 analysts). Their average target is close to the price."
+       "why": "Most analysts say Buy (42 analysts). Their average target is close to the price.",
+       "mc": 490190000000
       },
       {
        "n": "Palantir Technologies",
@@ -1333,7 +1406,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (34 analysts). Their average target is about 55% above the price."
+       "why": "Most analysts say Buy (34 analysts). Their average target is about 55% above the price.",
+       "mc": 404770000000
       },
       {
        "n": "Cisco Systems",
@@ -1398,7 +1472,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (29 analysts). Their average target is about 50% above the price."
+       "why": "Most analysts say Buy (29 analysts). Their average target is about 50% above the price.",
+       "mc": 376530000000
       },
       {
        "n": "Intel",
@@ -1463,7 +1538,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (47 analysts). Their average target is about 117% above the price."
+       "why": "Most analysts say Buy (47 analysts). Their average target is about 117% above the price.",
+       "mc": 317090000000
       },
       {
        "n": "Applied Materials",
@@ -1528,7 +1604,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (40 analysts). Their average target is about 93% above the price."
+       "why": "Most analysts are very positive (40 analysts). Their average target is about 93% above the price.",
+       "mc": 294030000000
       },
       {
        "n": "Lam Research",
@@ -1593,7 +1670,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (34 analysts). Their average target is about 98% above the price."
+       "why": "Most analysts are very positive (34 analysts). Their average target is about 98% above the price.",
+       "mc": 282210000000
       },
       {
        "n": "Texas Instruments",
@@ -1658,7 +1736,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (35 analysts). Their average target is about 31% above the price."
+       "why": "Most analysts say Buy (35 analysts). Their average target is about 31% above the price.",
+       "mc": 277420000000
       },
       {
        "n": "Palo Alto Networks",
@@ -1723,7 +1802,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (54 analysts). Their average target is about 16% above the price."
+       "why": "Most analysts say Buy (54 analysts). Their average target is about 16% above the price.",
+       "mc": 263180000000
       },
       {
        "n": "Netflix",
@@ -1788,7 +1868,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (51 analysts). Their average target is about 42% above the price."
+       "why": "Most analysts say Buy (51 analysts). Their average target is about 42% above the price.",
+       "mc": 255210000000
       },
       {
        "n": "Linde",
@@ -1853,7 +1934,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (29 analysts). Their average target is about 5% above the price."
+       "why": "Most analysts say Buy (29 analysts). Their average target is about 5% above the price.",
+       "mc": 241510000000
       },
       {
        "n": "Gilead Sciences",
@@ -1918,7 +2000,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (28 analysts). Their average target is about 4% below the price."
+       "why": "Most analysts say Buy (28 analysts). Their average target is about 4% below the price.",
+       "mc": 208480000000
       },
       {
        "n": "Arm Holdings",
@@ -1983,7 +2066,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (43 analysts). Their average target is about 69% above the price."
+       "why": "Most analysts say Buy (43 analysts). Their average target is about 69% above the price.",
+       "mc": 203870000000
       },
       {
        "n": "KLA Corporation",
@@ -2048,7 +2132,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (29 analysts). Their average target is about 64% above the price."
+       "why": "Most analysts say Buy (29 analysts). Their average target is about 64% above the price.",
+       "mc": 198470000000
       },
       {
        "n": "Analog Devices",
@@ -2113,7 +2198,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (35 analysts). Their average target is about 51% above the price."
+       "why": "Most analysts are very positive (35 analysts). Their average target is about 51% above the price.",
+       "mc": 192840000000
       },
       {
        "n": "Qualcomm",
@@ -2178,7 +2264,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (37 analysts). Their average target is about 24% above the price."
+       "why": "Analysts mostly say Hold (37 analysts). Their average target is about 24% above the price.",
+       "mc": 184540000000
       },
       {
        "n": "T-Mobile US",
@@ -2243,7 +2330,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (28 analysts). Their average target is about 36% above the price."
+       "why": "Most analysts say Buy (28 analysts). Their average target is about 36% above the price.",
+       "mc": 180020000000
       },
       {
        "n": "Marvell Technology",
@@ -2308,7 +2396,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (43 analysts). Their average target is about 136% above the price."
+       "why": "Most analysts are very positive (43 analysts). Their average target is about 136% above the price.",
+       "mc": 137630000000
       },
       {
        "n": "Booking Holdings",
@@ -2373,7 +2462,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (36 analysts). Their average target is about 44% above the price."
+       "why": "Most analysts say Buy (36 analysts). Their average target is about 44% above the price.",
+       "mc": 118680000000
       },
       {
        "n": "Intuit",
@@ -2438,7 +2528,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (34 analysts). Their average target is about 50% above the price."
+       "why": "Most analysts say Buy (34 analysts). Their average target is about 50% above the price.",
+       "mc": 91310000000
       },
       {
        "n": "MercadoLibre",
@@ -2503,7 +2594,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (26 analysts). Their average target is about 59% above the price."
+       "why": "Most analysts say Buy (26 analysts). Their average target is about 59% above the price.",
+       "mc": 75610000000
       },
       {
        "n": "Western Digital",
@@ -2568,7 +2660,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (26 analysts). Their average target is about 134% above the price."
+       "why": "Most analysts say Buy (26 analysts). Their average target is about 134% above the price.",
+       "mc": 110670000000
       },
       {
        "n": "Semtech",
@@ -2984,7 +3077,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (24 analysts). Their average target is about 12% above the price."
+       "why": "Most analysts say Buy (24 analysts). Their average target is about 12% above the price.",
+       "mc": 285690000000
       },
       {
        "n": "HSBC Holdings",
@@ -3049,7 +3143,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (17 analysts). Their average target is about 19% above the price."
+       "why": "Analysts mostly say Hold (17 analysts). Their average target is about 19% above the price.",
+       "mc": 279500000000
       },
       {
        "n": "Shell",
@@ -3114,7 +3209,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (19 analysts). Their average target is about 11% above the price."
+       "why": "Most analysts say Buy (19 analysts). Their average target is about 11% above the price.",
+       "mc": 265290000000
       },
       {
        "n": "Unilever",
@@ -3179,7 +3275,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (15 analysts). Their average target is close to the price."
+       "why": "Analysts mostly say Hold (15 analysts). Their average target is close to the price.",
+       "mc": 143950000000
       },
       {
        "n": "Rolls-Royce Holdings",
@@ -3244,7 +3341,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (20 analysts). Their average target is about 33% above the price. It rose 3.9% in the latest session."
+       "why": "Most analysts say Buy (20 analysts). Their average target is about 33% above the price. It rose 3.9% in the latest session.",
+       "mc": 138810000000
       },
       {
        "n": "British American Tobacco",
@@ -3309,7 +3407,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (13 analysts). Their average target is about 13% above the price."
+       "why": "Most analysts say Buy (13 analysts). Their average target is about 13% above the price.",
+       "mc": 129730000000
       },
       {
        "n": "BP",
@@ -3374,7 +3473,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (19 analysts). Their average target is about 17% above the price."
+       "why": "Most analysts say Buy (19 analysts). Their average target is about 17% above the price.",
+       "mc": 110750000000
       },
       {
        "n": "GSK",
@@ -3439,7 +3539,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (23 analysts). Their average target is about 12% above the price."
+       "why": "Analysts mostly say Hold (23 analysts). Their average target is about 12% above the price.",
+       "mc": 102300000000
       },
       {
        "n": "Rio Tinto",
@@ -3504,7 +3605,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (21 analysts). Their average target is about 33% above the price."
+       "why": "Most analysts say Buy (21 analysts). Their average target is about 33% above the price.",
+       "mc": 121300000000
       },
       {
        "n": "National Grid",
@@ -3569,7 +3671,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (16 analysts). Their average target is about 5% above the price."
+       "why": "Most analysts say Buy (16 analysts). Their average target is about 5% above the price.",
+       "mc": 82980000000
       },
       {
        "n": "Barclays",
@@ -3634,7 +3737,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (17 analysts). Their average target is about 40% above the price. It rose 3.3% in the latest session."
+       "why": "Most analysts say Buy (17 analysts). Their average target is about 40% above the price. It rose 3.3% in the latest session.",
+       "mc": 70090000000
       },
       {
        "n": "Lloyds Banking Group",
@@ -3699,7 +3803,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (19 analysts). Their average target is about 25% above the price. It rose 3.1% in the latest session."
+       "why": "Most analysts say Buy (19 analysts). Their average target is about 25% above the price. It rose 3.1% in the latest session.",
+       "mc": 70780000000
       },
       {
        "n": "RELX",
@@ -3764,7 +3869,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (17 analysts). Their average target is about 9% above the price."
+       "why": "Most analysts are very positive (17 analysts). Their average target is about 9% above the price.",
+       "mc": 69590000000
       },
       {
        "n": "BAE Systems",
@@ -3829,7 +3935,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (20 analysts). Their average target is about 22% above the price. It rose 3.1% in the latest session."
+       "why": "Most analysts say Buy (20 analysts). Their average target is about 22% above the price. It rose 3.1% in the latest session.",
+       "mc": 72480000000
       },
       {
        "n": "Glencore",
@@ -3959,7 +4066,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (16 analysts). Their average target is about 15% above the price. It rose 3.6% in the latest session."
+       "why": "Most analysts say Buy (16 analysts). Their average target is about 15% above the price. It rose 3.6% in the latest session.",
+       "mc": 64320000000
       },
       {
        "n": "NatWest Group",
@@ -4024,7 +4132,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (18 analysts). Their average target is about 33% above the price. It rose 3.5% in the latest session."
+       "why": "Most analysts say Buy (18 analysts). Their average target is about 33% above the price. It rose 3.5% in the latest session.",
+       "mc": 60630000000
       },
       {
        "n": "Standard Chartered",
@@ -4089,7 +4198,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (14 analysts). Their average target is about 20% above the price."
+       "why": "Most analysts say Buy (14 analysts). Their average target is about 20% above the price.",
+       "mc": 54010000000
       },
       {
        "n": "Diageo",
@@ -4154,7 +4264,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (22 analysts). Their average target is close to the price."
+       "why": "Most analysts say Buy (22 analysts). Their average target is close to the price.",
+       "mc": 56660000000
       },
       {
        "n": "Reckitt Benckiser",
@@ -4219,7 +4330,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (19 analysts). Their average target is about 7% above the price."
+       "why": "Most analysts say Buy (19 analysts). Their average target is about 7% above the price.",
+       "mc": 48360000000
       },
       {
        "n": "Tesco",
@@ -4284,7 +4396,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (15 analysts). Their average target is about 4% below the price."
+       "why": "Most analysts say Buy (15 analysts). Their average target is about 4% below the price.",
+       "mc": 44590000000
       },
       {
        "n": "Anglo American",
@@ -4349,7 +4462,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (17 analysts). Their average target is about 24% above the price. It rose 4.5% in the latest session."
+       "why": "Most analysts say Buy (17 analysts). Their average target is about 24% above the price. It rose 4.5% in the latest session.",
+       "mc": 45380000000
       },
       {
        "n": "Haleon",
@@ -4414,7 +4528,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (18 analysts). Their average target is about 17% above the price."
+       "why": "Most analysts say Buy (18 analysts). Their average target is about 17% above the price.",
+       "mc": 41280000000
       },
       {
        "n": "SSE",
@@ -4479,7 +4594,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (16 analysts). Their average target is about 5% above the price."
+       "why": "Most analysts say Buy (16 analysts). Their average target is about 5% above the price.",
+       "mc": 41870000000
       },
       {
        "n": "Imperial Brands",
@@ -4544,7 +4660,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (12 analysts). Their average target is about 5% below the price. Shares jumped after Altria said it may make a cash offer; Altria has until 24 Dec to decide."
+       "why": "Most analysts say Buy (12 analysts). Their average target is about 5% below the price. Shares jumped after Altria said it may make a cash offer; Altria has until 24 Dec to decide.",
+       "mc": 33640000000
       },
       {
        "n": "Experian",
@@ -4674,7 +4791,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (12 analysts). Their average target is about 22% above the price."
+       "why": "Most analysts say Buy (12 analysts). Their average target is about 22% above the price.",
+       "mc": 36750000000
       },
       {
        "n": "Antofagasta",
@@ -4739,7 +4857,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (22 analysts). Their average target is about 50% above the price. It rose about 5% in early Friday trade as copper rebounded."
+       "why": "Analysts mostly say Hold (22 analysts). Their average target is about 50% above the price. It rose about 5% in early Friday trade as copper rebounded.",
+       "mc": 33640000000
       },
       {
        "n": "Prudential",
@@ -4804,7 +4923,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (14 analysts). Their average target is about 49% above the price."
+       "why": "Most analysts are very positive (14 analysts). Their average target is about 49% above the price.",
+       "mc": 30490000000
       },
       {
        "n": "Vodafone Group",
@@ -4869,7 +4989,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (16 analysts). Their average target is about 11% above the price."
+       "why": "Analysts mostly say Hold (16 analysts). Their average target is about 11% above the price.",
+       "mc": 31160000000
       },
       {
        "n": "Aviva",
@@ -4934,7 +5055,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (14 analysts). Their average target is about 4% below the price."
+       "why": "Most analysts say Buy (14 analysts). Their average target is about 4% below the price.",
+       "mc": 29290000000
       },
       {
        "n": "International Airlines Group",
@@ -5064,7 +5186,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (17 analysts). Their average target is about 10% above the price."
+       "why": "Analysts mostly say Hold (17 analysts). Their average target is about 10% above the price.",
+       "mc": 26310000000
       },
       {
        "n": "Next",
@@ -5129,7 +5252,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (20 analysts). Their average target is about 3% above the price."
+       "why": "Most analysts say Buy (20 analysts). Their average target is about 3% above the price.",
+       "mc": 23890000000
       },
       {
        "n": "Legal & General",
@@ -5194,7 +5318,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts lean towards Sell (13 analysts). Their average target is about 8% below the price."
+       "why": "Analysts lean towards Sell (13 analysts). Their average target is about 8% below the price.",
+       "mc": 20590000000
       },
       {
        "n": "Fresnillo",
@@ -5389,7 +5514,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts lean towards Sell (17 analysts). Their average target is about 12% below the price."
+       "why": "Analysts lean towards Sell (17 analysts). Their average target is about 12% below the price.",
+       "mc": 18810000000
       },
       {
        "n": "Halma",
@@ -5454,7 +5580,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (18 analysts). Their average target is about 31% above the price. It rose 3.1% in the latest session."
+       "why": "Most analysts say Buy (18 analysts). Their average target is about 31% above the price. It rose 3.1% in the latest session.",
+       "mc": 16680000000
       },
       {
        "n": "Sage Group",
@@ -5519,7 +5646,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (19 analysts). Their average target is close to the price."
+       "why": "Most analysts say Buy (19 analysts). Their average target is close to the price.",
+       "mc": 13700000000
       },
       {
        "n": "Babcock International",
@@ -5583,7 +5711,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Jun 30, 2026"
         ]
        ],
-       "why": "Most analysts say Buy (10 analysts). Their average target is about 24% above the price. Shares rose after a large Ministry of Defence submarine contract."
+       "why": "Most analysts say Buy (10 analysts). Their average target is about 24% above the price. Shares rose after a large Ministry of Defence submarine contract.",
+       "mc": 6930000000
       },
       {
        "n": "Endeavour Mining",
@@ -5647,7 +5776,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Jul 30, 2026"
         ]
        ],
-       "why": "Most analysts are very positive (13 analysts). Gold miners rose as the gold price recovered. Its targets are in Canadian dollars (Toronto listing)."
+       "why": "Most analysts are very positive (13 analysts). Gold miners rose as the gold price recovered. Its targets are in Canadian dollars (Toronto listing).",
+       "mc": 10480000000
       },
       {
        "n": "Melrose Industries",
@@ -5711,7 +5841,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Apr 10, 2026"
         ]
        ],
-       "why": "Most analysts say Buy (15 analysts). Their average target is about 36% above the price. It rose 4.8% in the latest session."
+       "why": "Most analysts say Buy (15 analysts). Their average target is about 36% above the price. It rose 4.8% in the latest session.",
+       "mc": 7950000000
       },
       {
        "n": "Halfords",
@@ -5871,7 +6002,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Jul 30, 2026"
         ]
        ],
-       "why": "Most analysts say Buy (21 analysts). Their average target is about 53% above the price. It rose 3.2% in the latest session."
+       "why": "Most analysts say Buy (21 analysts). Their average target is about 53% above the price. It rose 3.2% in the latest session.",
+       "mc": 7240000000
       },
       {
        "n": "Land Securities (Landsec)",
@@ -5935,7 +6067,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Sep 1, 2026"
         ]
        ],
-       "why": "Most analysts say Buy (16 analysts). Their average target is about 4% above the price."
+       "why": "Most analysts say Buy (16 analysts). Their average target is about 4% above the price.",
+       "mc": 7460000000
       },
       {
        "n": "Severn Trent",
@@ -5999,7 +6132,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Jun 2, 2026"
         ]
        ],
-       "why": "Analysts mostly say Hold (13 analysts). Their average target is close to the price."
+       "why": "Analysts mostly say Hold (13 analysts). Their average target is close to the price.",
+       "mc": 12960000000
       }
      ]
     },
@@ -6087,7 +6221,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (25 analysts). Their average target is about 19% above the price."
+       "why": "Most analysts are very positive (25 analysts). Their average target is about 19% above the price.",
+       "mc": 204400000000
       },
       {
        "n": "HDFC Bank",
@@ -6152,7 +6287,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (41 analysts). Their average target is about 14% above the price."
+       "why": "Most analysts are very positive (41 analysts). Their average target is about 14% above the price.",
+       "mc": 145840000000
       },
       {
        "n": "Bharti Airtel",
@@ -6193,7 +6329,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (34 analysts). Their average target is about 10% above the price."
+       "why": "Most analysts are very positive (34 analysts). Their average target is about 10% above the price.",
+       "mc": 141920000000
       },
       {
        "n": "ICICI Bank",
@@ -6226,7 +6363,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (42 analysts). Their average target is about 8% above the price."
+       "why": "Most analysts are very positive (42 analysts). Their average target is about 8% above the price.",
+       "mc": 131110000000
       },
       {
        "n": "State Bank of India",
@@ -6283,7 +6421,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (40 analysts). Their average target is about 10% above the price."
+       "why": "Most analysts are very positive (40 analysts). Their average target is about 10% above the price.",
+       "mc": 113500000000
       },
       {
        "n": "Tata Consultancy Services",
@@ -6340,7 +6479,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (41 analysts). Their average target is about 6% below the price. IT shares led the market; TCS rose nearly 5%."
+       "why": "Most analysts say Buy (41 analysts). Their average target is about 6% below the price. IT shares led the market; TCS rose nearly 5%.",
+       "mc": 103340000000
       },
       {
        "n": "Bajaj Finance",
@@ -6397,7 +6537,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (35 analysts). Their average target is about 6% above the price. Lenders fell; Bajaj Finance dropped about 3%."
+       "why": "Most analysts say Buy (35 analysts). Their average target is about 6% above the price. Lenders fell; Bajaj Finance dropped about 3%.",
+       "mc": 75270000000
       },
       {
        "n": "Larsen & Toubro",
@@ -6438,7 +6579,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (29 analysts). Their average target is about 9% above the price."
+       "why": "Most analysts say Buy (29 analysts). Their average target is about 9% above the price.",
+       "mc": 61500000000
       },
       {
        "n": "Kotak Mahindra Bank",
@@ -6487,7 +6629,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (37 analysts). Their average target is about 9% below the price."
+       "why": "Most analysts say Buy (37 analysts). Their average target is about 9% below the price.",
+       "mc": 54880000000
       },
       {
        "n": "Hindustan Unilever",
@@ -6552,7 +6695,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (39 analysts). Their average target is about 15% above the price."
+       "why": "Most analysts say Buy (39 analysts). Their average target is about 15% above the price.",
+       "mc": 54160000000
       },
       {
        "n": "Infosys",
@@ -6601,7 +6745,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (42 analysts). Their average target is close to the price. IT shares led the market; Infosys rose about 4.5%."
+       "why": "Most analysts say Buy (42 analysts). Their average target is close to the price. IT shares led the market; Infosys rose about 4.5%.",
+       "mc": 52730000000
       },
       {
        "n": "Sun Pharmaceutical",
@@ -6650,7 +6795,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (34 analysts). Their average target is about 10% above the price."
+       "why": "Most analysts say Buy (34 analysts). Their average target is about 10% above the price.",
+       "mc": 49720000000
       },
       {
        "n": "Maruti Suzuki",
@@ -6691,7 +6837,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (39 analysts). Their average target is about 14% above the price."
+       "why": "Most analysts say Buy (39 analysts). Their average target is about 14% above the price.",
+       "mc": 47660000000
       },
       {
        "n": "Axis Bank",
@@ -6748,7 +6895,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (41 analysts). Their average target is about 13% above the price."
+       "why": "Most analysts are very positive (41 analysts). Their average target is about 13% above the price.",
+       "mc": 47470000000
       },
       {
        "n": "Mahindra & Mahindra",
@@ -6772,7 +6920,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
        "pt": "Last traded price 3:31 pm IST, Thu 26 Nov (Trendlyne) · day change not verified",
        "an": [],
        "core": 1,
-       "why": "Most analysts are very positive (35 analysts). Their average target is about 20% above the price."
+       "why": "Most analysts are very positive (35 analysts). Their average target is about 20% above the price.",
+       "mc": 45300000000
       },
       {
        "n": "Adani Ports & SEZ",
@@ -6805,7 +6954,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (23 analysts). Their average target is about 8% above the price."
+       "why": "Most analysts are very positive (23 analysts). Their average target is about 8% above the price.",
+       "mc": 47630000000
       },
       {
        "n": "Titan Company",
@@ -6846,7 +6996,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (36 analysts). Their average target is about 17% above the price."
+       "why": "Most analysts say Buy (36 analysts). Their average target is about 17% above the price.",
+       "mc": 44450000000
       },
       {
        "n": "HCLTech",
@@ -6903,7 +7054,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (39 analysts). Their average target is about 14% below the price. IT shares led the market for a fourth day; HCL Tech gained about 6%."
+       "why": "Analysts mostly say Hold (39 analysts). Their average target is about 14% below the price. IT shares led the market for a fourth day; HCL Tech gained about 6%.",
+       "mc": 43000000000
       },
       {
        "n": "ITC",
@@ -6944,7 +7096,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (34 analysts). Their average target is about 4% above the price."
+       "why": "Most analysts say Buy (34 analysts). Their average target is about 4% above the price.",
+       "mc": 41620000000
       },
       {
        "n": "UltraTech Cement",
@@ -6993,7 +7146,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (37 analysts). Their average target is about 9% above the price."
+       "why": "Most analysts are very positive (37 analysts). Their average target is about 9% above the price.",
+       "mc": 40520000000
       },
       {
        "n": "Adani Enterprises",
@@ -7017,7 +7171,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
        "pt": "Last traded price 3:31 pm IST, Thu 26 Nov (Trendlyne) · day change not verified",
        "an": [],
        "core": 1,
-       "why": "Most analysts are very positive (4 analysts). Their average target is about 34% above the price."
+       "why": "Most analysts are very positive (4 analysts). Their average target is about 34% above the price.",
+       "mc": 38950000000
       },
       {
        "n": "Eternal (Zomato)",
@@ -7082,7 +7237,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (32 analysts). Their average target is about 4% above the price."
+       "why": "Most analysts say Buy (32 analysts). Their average target is about 4% above the price.",
+       "mc": 36640000000
       },
       {
        "n": "JSW Steel",
@@ -7131,7 +7287,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (35 analysts). Their average target is about 6% above the price."
+       "why": "Most analysts say Buy (35 analysts). Their average target is about 6% above the price.",
+       "mc": 34420000000
       },
       {
        "n": "NTPC",
@@ -7196,7 +7353,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (28 analysts). Their average target is about 34% above the price."
+       "why": "Most analysts are very positive (28 analysts). Their average target is about 34% above the price.",
+       "mc": 33590000000
       },
       {
        "n": "Bajaj Finserv",
@@ -7229,7 +7387,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (13 analysts). Their average target is about 25% above the price."
+       "why": "Most analysts say Buy (13 analysts). Their average target is about 25% above the price.",
+       "mc": 32640000000
       },
       {
        "n": "Bharat Electronics",
@@ -7278,7 +7437,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (33 analysts). Their average target is about 22% above the price."
+       "why": "Most analysts are very positive (33 analysts). Their average target is about 22% above the price.",
+       "mc": 31980000000
       },
       {
        "n": "Oil & Natural Gas Corp",
@@ -7343,7 +7503,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (30 analysts). Their average target is about 32% above the price."
+       "why": "Most analysts say Buy (30 analysts). Their average target is about 32% above the price.",
+       "mc": 30330000000
       },
       {
        "n": "Nestlé India",
@@ -7392,7 +7553,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (36 analysts). Their average target is about 14% above the price."
+       "why": "Most analysts say Buy (36 analysts). Their average target is about 14% above the price.",
+       "mc": 27540000000
       },
       {
        "n": "Power Grid Corporation",
@@ -7425,7 +7587,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (26 analysts). Their average target is about 20% above the price."
+       "why": "Most analysts say Buy (26 analysts). Their average target is about 20% above the price.",
+       "mc": 26850000000
       },
       {
        "n": "Asian Paints",
@@ -7466,7 +7629,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Analysts mostly say Hold (34 analysts). Their average target is about 17% above the price. Among the biggest Nifty fallers on 26 Nov."
+       "why": "Analysts mostly say Hold (34 analysts). Their average target is about 17% above the price. Among the biggest Nifty fallers on 26 Nov.",
+       "mc": 26360000000
       },
       {
        "n": "Coal India",
@@ -7499,7 +7663,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (25 analysts). Their average target is about 21% above the price."
+       "why": "Most analysts say Buy (25 analysts). Their average target is about 21% above the price.",
+       "mc": 25920000000
       },
       {
        "n": "Shriram Finance",
@@ -7540,7 +7705,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (34 analysts). Their average target is about 17% above the price. Lenders fell; Shriram Finance dropped about 3%."
+       "why": "Most analysts are very positive (34 analysts). Their average target is about 17% above the price. Lenders fell; Shriram Finance dropped about 3%.",
+       "mc": 24480000000
       },
       {
        "n": "Eicher Motors",
@@ -7581,7 +7747,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (37 analysts). Their average target is close to the price."
+       "why": "Most analysts say Buy (37 analysts). Their average target is close to the price.",
+       "mc": 24290000000
       },
       {
        "n": "InterGlobe Aviation (IndiGo)",
@@ -7646,7 +7813,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (25 analysts). Their average target is close to the price."
+       "why": "Most analysts say Buy (25 analysts). Their average target is close to the price.",
+       "mc": 23530000000
       },
       {
        "n": "Grasim Industries",
@@ -7687,7 +7855,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (10 analysts). Their average target is about 21% above the price."
+       "why": "Most analysts are very positive (10 analysts). Their average target is about 21% above the price.",
+       "mc": 23320000000
       },
       {
        "n": "Hindalco Industries",
@@ -7711,7 +7880,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
        "pt": "Last traded price 3:31 pm IST, Thu 26 Nov (Trendlyne; official NSE close can differ slightly); 1D = 25 Nov close",
        "an": [],
        "core": 1,
-       "why": "Most analysts say Buy (29 analysts). Their average target is about 27% above the price. It rose 3.1% in the latest session."
+       "why": "Most analysts say Buy (29 analysts). Their average target is about 27% above the price. It rose 3.1% in the latest session.",
+       "mc": 21980000000
       },
       {
        "n": "Tata Steel",
@@ -7760,7 +7930,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (35 analysts). Their average target is about 33% above the price."
+       "why": "Most analysts say Buy (35 analysts). Their average target is about 33% above the price.",
+       "mc": 22060000000
       },
       {
        "n": "SBI Life Insurance",
@@ -7793,7 +7964,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts are very positive (36 analysts). Their average target is about 22% above the price."
+       "why": "Most analysts are very positive (36 analysts). Their average target is about 22% above the price.",
+       "mc": 19990000000
       },
       {
        "n": "Tech Mahindra",
@@ -7858,7 +8030,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
         ]
        ],
        "core": 1,
-       "why": "Most analysts say Buy (39 analysts). Their average target is about 12% below the price."
+       "why": "Most analysts say Buy (39 analysts). Their average target is about 12% below the price.",
+       "mc": 17780000000
       },
       {
        "n": "Wipro",
@@ -7906,7 +8079,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Jul 17, 2026"
         ]
        ],
-       "why": "Analysts mostly say Hold (40 analysts). Their average target is about 9% below the price. Rose about 4% with other IT shares."
+       "why": "Analysts mostly say Hold (40 analysts). Their average target is about 9% below the price. Rose about 4% with other IT shares.",
+       "mc": 21470000000
       },
       {
        "n": "BSE Ltd",
@@ -7962,7 +8136,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Jun 18, 2026"
         ]
        ],
-       "why": "Most analysts say Buy (20 analysts). Their average target is close to the price. The exchange operator rose about 5.7%, among the top gainers."
+       "why": "Most analysts say Buy (20 analysts). Their average target is close to the price. The exchange operator rose about 5.7%, among the top gainers.",
+       "mc": 17530000000
       },
       {
        "n": "Tata Consumer Products",
@@ -7985,7 +8160,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
        ],
        "pt": "Last traded price 3:31 pm IST, Thu 26 Nov (Trendlyne); day change as reported in 26 Nov market wraps",
        "an": [],
-       "why": "Most analysts say Buy (27 analysts). Their average target is about 12% above the price."
+       "why": "Most analysts say Buy (27 analysts). Their average target is about 12% above the price.",
+       "mc": 12460000000
       },
       {
        "n": "HDFC Life Insurance",
@@ -8025,7 +8201,8 @@ dialog::backdrop{background:rgba(8,12,30,.55)}
          "Jul 16, 2026"
         ]
        ],
-       "why": "Most analysts are very positive (33 analysts). Their average target is about 21% above the price."
+       "why": "Most analysts are very positive (33 analysts). Their average target is about 21% above the price.",
+       "mc": 13960000000
       },
       {
        "n": "APL Apollo Tubes",
@@ -15817,8 +15994,10 @@ const SCORE={SB:4,B:3,H:2,S:1};
 const scoreLbl=v=>v>=3.5?"Strong Buy":v>=2.75?"Buy":v>=1.75?"Hold":"Sell";
 function findStock(k){const [id,tk]=k.split("|");const m=byId[id];const s=m&&m.stocks.find(x=>x.t===tk);if(s)return {s,id,day:t,isToday:true};
  for(const d of days){const mm=d.markets.find(x=>x.id===id);const ss=mm&&mm.stocks.find(x=>x.t===tk);if(ss)return {s:ss,id,day:d,isToday:d===t};}return null;}
-function consInfo(s){const c=String(s.cons||"");const n=(c.match(/(\d+)\s+analysts/)||[])[1];const pt=(c.match(/avg PT\s*([^·]+)/)||[])[1];
- const ptn=pt?parseFloat(pt.replace(/[^0-9.]/g,"")):null;return {n:n?+n:null,pt:pt?pt.trim():null,up:ptn&&s.pn?(ptn/s.pn-1)*100:null};}
+function consInfo(s){const c=String(s.cons||"");const n=(c.match(/(\d+)\s+analysts/)||[])[1];const m=c.match(/avg PT\s*([^\d·]{0,3})([\d,]+(?:\.\d+)?)\s*(p\b)?/);
+ const pt=m?(m[1]+m[2]+(m[3]||"")).trim():null;const ptn=m?parseFloat(m[2].replace(/,/g,"")):null;
+ const pc=String(s.p||"").replace(/^[≈~\s]+/,"");const cp=/p\s*$/.test(pc)?"p":(pc.match(/^[^\d]*/)||[""])[0].trim();const ct=m?(m[3]?"p":m[1].trim()):"";
+ return {n:n?+n:null,pt:pt,up:ptn&&s.pn&&cp===ct?(ptn/s.pn-1)*100:null};}
 function hchg(s,i){const v=s.h&&s.h[i];return v!=null&&s.pn!=null?(s.pn/v-1)*100:null;}
 function bigChart(s,id){const lab=["1Y ago","6M ago","1M ago","1W ago","1D ago","Latest"];const raw=(s.h||[]).slice().reverse().concat([s.pn]);
  const pts=raw.map((v,i)=>[i,v]).filter(p=>p[1]!=null);if(pts.length<2)return '<div class="bigc"><h4>Price history</h4><p class="cap">Not enough verified closing prices for a chart yet.</p></div>';
@@ -15855,8 +16034,7 @@ function render(){const m=byId[state.tab]||t.markets[0];state.tab=m.id;
  const stTxt=B?B.status:(live(m)?'Open now':(m.closed?'Closed today · '+m.closed:'Closed for the day'));
  const moves=B?B.moves:String(m.trend||"").split(/(?<=[.!?])\s+(?=[A-Z])/).filter(Boolean);
  el.innerHTML='<section class="mkt" role="tabpanel" aria-labelledby="tab-'+esc(m.id)+'"><div class="mhead"><div><h2>'+esc((SHORT[m.id]||m.name))+'</h2><span class="stat'+(live(m)?' open':'')+'">'+(live(m)?'<span class="dot live"></span>':'')+esc(stTxt)+'</span>'+
- (B?'<p class="bh">What the prices show</p>'+ul(B.times,'sm'):(m.closed&&m.showingPrev?ul([m.showingPrev],'sm'):''))+
- '<details class="tdet"><summary>Full timing details</summary><p>'+esc(m.time)+'</p></details></div><div><p class="bh">Today in brief</p>'+ul(moves)+'</div></div>'+
+ '</div><div><p class="bh">Today in brief</p>'+ul(moves)+'</div></div>'+
  '<div class="tools"><div class="seg" id="seg">'+[["all","All"]].concat(CATS).concat([["watch","★ Watchlist"]]).map(c=>{const k=c[0]==="all"?m.stocks.length:c[0]==="watch"?m.stocks.filter(s=>WL.has(wkey(m.id,s.t))).length:m.stocks.filter(s=>s.cat===c[0]).length;return '<button data-c="'+c[0]+'" aria-pressed="'+(state.cat===c[0])+'">'+c[1]+' <span style="color:var(--muted)">'+k+'</span></button>';}).join("")+'</div><span class="gap"></span>'+
  '<input id="q" type="search" placeholder="Find a company or ticker" aria-label="Find a company or ticker" value="'+esc(state.q)+'"><select id="sort" aria-label="Sort"><option value="rating">Group by rating</option><option value="sector">Group by sector</option><option value="up">Biggest gainers</option><option value="down">Biggest fallers</option><option value="name">A to Z</option></select></div><div id="cards">'+cards(m)+'</div></section>';
  el.querySelector('#sort').value=state.sort;
@@ -16006,6 +16184,61 @@ function openCompare(){const xs=CMP.map(findStock).filter(Boolean);if(xs.length<
   row('1 week',s=>ch(hchg(s,1)))+row('1 month',s=>ch(hchg(s,2)))+row('6 months',s=>ch(hchg(s,3)))+row('1 year',s=>ch(hchg(s,4)))+
   '</tbody></table></div><p class="lead" style="margin-top:12px">Prices are in each market’s own currency, so compare percentages rather than prices. n/a means the figure wasn’t verified.</p>');}
 
+
+/* table:v1 — all covered stocks */
+(function(){const host=document.getElementById('dt');if(!host)return;
+ const ROWS=t.markets.flatMap(m=>m.stocks.map(s=>({s,id:m.id})));
+ const D={ex:"all",q:"",ind:"",r:"",sz:"",mv:"",v:"ov",s:"mc",d:-1,n:50,p:1};let T=Object.assign({},D);
+ try{const u=new URLSearchParams(location.search);Object.keys(D).forEach(k=>{if(u.has(k)){const v=u.get(k);T[k]=typeof D[k]==="number"?(+v||D[k]):v;}});if(u.get("n")==="0")T.n=0;}catch(_){}
+ const big=n=>n==null?null:n>=1e12?(n/1e12).toFixed(2)+"T":n>=1e9?(n/1e9).toFixed(2)+"B":n>=1e6?(n/1e6).toFixed(2)+"M":String(n);
+ const na='<span class="na">–</span>';
+ const pc=v=>v==null||isNaN(v)?na:'<span class="num '+cls(v)+'">'+pct(v)+'</span>';
+ const size=n=>n==null?"":n>=2e11?"mega":n>=1e10?"large":n>=2e9?"mid":"small";
+ function spark(s){const v=(s.h||[]).slice().reverse().concat([s.pn]).filter(x=>x!=null);if(v.length<2)return na;const lo=Math.min(...v),hi=Math.max(...v),r=hi-lo||1;
+  const p=v.map((x,i)=>(i?"L":"M")+(i/(v.length-1)*76+2).toFixed(1)+" "+(22-(x-lo)/r*18).toFixed(1)).join(" ");const up=v[v.length-1]>=v[0];
+  return '<svg width="80" height="24" viewBox="0 0 80 24" aria-hidden="true"><path d="'+p+'" fill="none" stroke="'+(up?'var(--up)':'var(--down)')+'" stroke-width="1.6"/></svg>';}
+ const SYM={k:"t",l:"Symbol",g:o=>o.s.t,h:o=>'<span class="sym">'+starBtn(o.id,o.s)+esc(o.s.t)+'</span>'};
+ const CO={k:"n",l:"Company",g:o=>o.s.n,h:o=>'<span class="co" title="'+esc(o.s.n)+'">'+esc(o.s.n)+'</span>'};
+ const PRICE={k:"pn",l:"Price",r:1,g:o=>o.s.pn,h:o=>'<span class="num">'+esc(o.s.p||"–")+'</span>'};
+ const DAY={k:"c",l:"% Today",r:1,g:o=>o.s.c,h:o=>pc(o.s.c)};
+ const RT={k:"cat",l:"Rating",g:o=>SCORE[o.s.cat]||0,h:o=>'<span class="rb b'+esc(o.s.cat)+'">'+esc(CN[o.s.cat]||o.s.cat)+'</span>'};
+ const VIEWS={
+  ov:[SYM,CO,{k:"ex",l:"Exchange",g:o=>EXN[o.id],h:o=>'<span class="ex">'+esc(EXN[o.id])+'</span>'},{k:"ind",l:"Industry",g:o=>o.s.ind||"",h:o=>esc(o.s.ind||"–")},
+      {k:"mc",l:"Market cap",r:1,g:o=>o.s.mc,h:o=>o.s.mc!=null?'<span class="num">$'+big(o.s.mc)+'</span>':na},PRICE,DAY,RT],
+  pf:[SYM,CO,PRICE,DAY].concat(["1D","1W","1M","6M","1Y"].map((l,i)=>({k:"h"+i,l:l,r:1,g:o=>hchg(o.s,i),h:o=>pc(hchg(o.s,i))}))).concat([{k:"sp",l:"Trend",ns:1,h:o=>spark(o.s)}]),
+  an:[SYM,CO,RT,{k:"na",l:"Analysts",r:1,g:o=>consInfo(o.s).n,h:o=>{const v=consInfo(o.s).n;return v!=null?'<span class="num">'+v+'</span>':na;}},
+      {k:"pt",l:"Avg target",r:1,g:o=>{const c=consInfo(o.s);return c.up;},h:o=>{const c=consInfo(o.s);return c.pt?'<span class="num">'+esc(c.pt)+'</span>':na;}},
+      {k:"up",l:"Upside",r:1,g:o=>consInfo(o.s).up,h:o=>pc(consInfo(o.s).up)},
+      {k:"la",l:"Latest analyst action",ns:1,h:o=>{const a=(o.s.an||[])[0];return a?'<span class="lt" title="'+esc(a.join(" · "))+'">'+esc(a[1])+' · '+esc(a[3])+' '+esc(a[2])+(a[4]&&a[4]!=="n/a"?' · '+esc(a[4]):'')+' · '+esc(a[5])+'</span>':na;}}]};
+ const $=id=>document.getElementById(id);
+ const inds=[...new Set(ROWS.map(o=>o.s.ind).filter(Boolean))].sort();
+ $('tind').innerHTML='<option value="">All industries</option>'+inds.map(x=>'<option>'+esc(x)+'</option>').join("");
+ const cnt=id=>ROWS.filter(o=>id==="all"||o.id===id).length;
+ function save(){try{const u=new URLSearchParams(location.search);Object.keys(D).forEach(k=>{if(k==="p"||T[k]===D[k])u.delete(k);else u.set(k,T[k]);});const q=u.toString();history.replaceState(null,"",location.pathname+(q?"?"+q:"")+location.hash);}catch(_){}}
+ function filt(){const q=T.q.trim().toLowerCase();return ROWS.filter(o=>(T.ex==="all"||o.id===T.ex)&&(!q||(o.s.n+" "+o.s.t).toLowerCase().includes(q))&&(!T.ind||o.s.ind===T.ind)&&(!T.r||o.s.cat===T.r)&&(!T.sz||size(o.s.mc)===T.sz)&&(!T.mv||(T.mv==="up"?o.s.c>0:o.s.c<0)));}
+ function draw(){const cols=VIEWS[T.v]||VIEWS.ov;if(!cols.some(c=>c.k===T.s&&!c.ns)){T.s=T.v==="pf"?"c":T.v==="an"?"up":"mc";T.d=-1;}
+  const col=cols.find(c=>c.k===T.s);let xs=filt();
+  xs.sort((a,b)=>{const x=col.g(a),y=col.g(b);const nx=x==null||x==="",ny=y==null||y==="";if(nx&&ny)return 0;if(nx)return 1;if(ny)return -1;return (typeof x==="string"?x.localeCompare(y):x-y)*T.d;});
+  const tot=xs.length,per=T.n||tot||1,pages=Math.max(1,Math.ceil(tot/per));if(T.p>pages)T.p=pages;const pg=xs.slice((T.p-1)*per,(T.p-1)*per+per);
+  host.tHead.innerHTML='<tr>'+cols.map(c=>{const on=c.k===T.s;return '<th scope="col" class="'+(c.r?'r':'')+'"'+(on?' aria-sort="'+(T.d>0?'ascending':'descending')+'"':'')+'>'+(c.ns?esc(c.l):'<button type="button" data-sort="'+c.k+'">'+esc(c.l)+'<span class="ar" aria-hidden="true">'+(on?(T.d>0?'▲':'▼'):'')+'</span></button>')+'</th>';}).join("")+'</tr>';
+  host.tBodies[0].innerHTML=pg.length?pg.map(o=>'<tr data-open="'+esc(wkey(o.id,o.s.t))+'">'+cols.map(c=>'<td class="'+(c.r?'r':'')+'">'+c.h(o)+'</td>').join("")+'</tr>').join(""):'<tr><td colspan="'+cols.length+'" class="na" style="padding:18px">No stocks match these filters. <button type="button" class="anb" data-treset="1">Reset filters</button></td></tr>';
+  $('tex').innerHTML=[["all","All"]].concat(t.markets.map(m=>[m.id,EXN[m.id]])).map(e=>'<button type="button" role="tab" data-ex="'+e[0]+'" aria-selected="'+(T.ex===e[0])+'">'+esc(e[1])+'<small>'+cnt(e[0])+'</small></button>').join("");
+  document.querySelectorAll('#tview button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===T.v));
+  $('tq').value=T.q;$('tind').value=T.ind;$('trt').value=T.r;$('tsz').value=T.sz;$('tmv').value=T.mv;$('tn').value=String(T.n);
+  const by=t.markets.map(m=>EXN[m.id]+' '+m.stocks.length).join(' · ');
+  $('tcount').innerHTML='<b>'+tot+' of '+ROWS.length+' stocks</b> · '+esc(by);
+  $('tpage').textContent='Page '+T.p+' of '+pages;$('tprev').disabled=T.p<=1;$('tnext').disabled=T.p>=pages;
+  $('tnote').textContent='Market cap in US dollars, approximate. Prices in each market’s own currency. Click a row for details.';save();}
+ const sec=document.getElementById('table');
+ sec.addEventListener('click',e=>{const s=e.target.closest('[data-sort]');if(s){const k=s.dataset.sort;if(T.s===k)T.d=-T.d;else{T.s=k;T.d=(k==="t"||k==="n"||k==="ex"||k==="ind")?1:-1;}T.p=1;draw();return;}
+  const x=e.target.closest('[data-ex]');if(x){T.ex=x.dataset.ex;T.p=1;draw();return;}
+  const v=e.target.closest('#tview button');if(v){T.v=v.dataset.v;T.p=1;draw();return;}
+  if(e.target.closest('#treset,[data-treset]')){T=Object.assign({},D,{v:T.v});draw();return;}
+  if(e.target.closest('#tprev')){T.p--;draw();sec.querySelector('.twrap').scrollTop=0;return;}if(e.target.closest('#tnext')){T.p++;draw();sec.querySelector('.twrap').scrollTop=0;return;}});
+ $('tq').addEventListener('input',e=>{T.q=e.target.value;T.p=1;draw();});
+ [['tind','ind'],['trt','r'],['tsz','sz'],['tmv','mv']].forEach(([id,k])=>$(id).addEventListener('change',e=>{T[k]=e.target.value;T.p=1;draw();}));
+ $('tn').addEventListener('change',e=>{T.n=+e.target.value;T.p=1;draw();});
+ draw();})();
 /* feat:v1 — clicks */
 document.addEventListener('click',e=>{const w=e.target.closest('[data-w]');if(w){const k=w.dataset.w;if(WL.has(k))WL.delete(k);else WL.add(k);STO.set('ipulse-watch',[...WL]);syncBtns();drawWL();if(state.cat==="watch"){const m=byId[state.tab];m&&upd(m);}return;}
  const c=e.target.closest('[data-cmp]');if(c){const k=c.dataset.cmp;if(CMP.includes(k))CMP=CMP.filter(x=>x!==k);else{CMP.push(k);if(CMP.length>3)CMP.shift();}syncBtns();drawBar();return;}

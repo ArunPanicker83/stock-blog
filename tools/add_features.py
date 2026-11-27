@@ -80,8 +80,10 @@ const SCORE={SB:4,B:3,H:2,S:1};
 const scoreLbl=v=>v>=3.5?"Strong Buy":v>=2.75?"Buy":v>=1.75?"Hold":"Sell";
 function findStock(k){const [id,tk]=k.split("|");const m=byId[id];const s=m&&m.stocks.find(x=>x.t===tk);if(s)return {s,id,day:t,isToday:true};
  for(const d of days){const mm=d.markets.find(x=>x.id===id);const ss=mm&&mm.stocks.find(x=>x.t===tk);if(ss)return {s:ss,id,day:d,isToday:d===t};}return null;}
-function consInfo(s){const c=String(s.cons||"");const n=(c.match(/(\d+)\s+analysts/)||[])[1];const pt=(c.match(/avg PT\s*([^·]+)/)||[])[1];
- const ptn=pt?parseFloat(pt.replace(/[^0-9.]/g,"")):null;return {n:n?+n:null,pt:pt?pt.trim():null,up:ptn&&s.pn?(ptn/s.pn-1)*100:null};}
+function consInfo(s){const c=String(s.cons||"");const n=(c.match(/(\d+)\s+analysts/)||[])[1];const m=c.match(/avg PT\s*([^\d·]{0,3})([\d,]+(?:\.\d+)?)\s*(p\b)?/);
+ const pt=m?(m[1]+m[2]+(m[3]||"")).trim():null;const ptn=m?parseFloat(m[2].replace(/,/g,"")):null;
+ const pc=String(s.p||"").replace(/^[≈~\s]+/,"");const cp=/p\s*$/.test(pc)?"p":(pc.match(/^[^\d]*/)||[""])[0].trim();const ct=m?(m[3]?"p":m[1].trim()):"";
+ return {n:n?+n:null,pt:pt,up:ptn&&s.pn&&cp===ct?(ptn/s.pn-1)*100:null};}
 function hchg(s,i){const v=s.h&&s.h[i];return v!=null&&s.pn!=null?(s.pn/v-1)*100:null;}
 function bigChart(s,id){const lab=["1Y ago","6M ago","1M ago","1W ago","1D ago","Latest"];const raw=(s.h||[]).slice().reverse().concat([s.pn]);
  const pts=raw.map((v,i)=>[i,v]).filter(p=>p[1]!=null);if(pts.length<2)return '<div class="bigc"><h4>Price history</h4><p class="cap">Not enough verified closing prices for a chart yet.</p></div>';
@@ -182,7 +184,6 @@ def patch(s):
     # HTML hosts
     rep('<section class="zone band"><div class="in top2">',
         '<section class="zone band"><div class="in hours" id="hours" aria-label="Market hours"></div><div class="in top2">', "zone start")
-    rep('</div></div>\n</div></section>\n\n<nav class="tabs', '</div></div>\n</div>' + ZONE_ROW + '</section>\n\n<nav class="tabs', "zone end")
     rep('<footer class="band">', '<div class="cmpbar" id="cmpbar" hidden></div>\n<footer class="band">', "footer")
     # helpers before tabs are built
     rep("const tabs=document.getElementById('tabs');", PRE + "const tabs=document.getElementById('tabs');", "tabs const")
